@@ -1,0 +1,205 @@
+<!-- & c:/Users/ASUS/Documents/Codes/PY/Projects/env/bin/Activate.ps1 -->
+
+<!DOCTYPE html>
+<html>    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quidk</title>
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+*{
+    font-family: 'Noto Sans', sans-serif;
+    letter-spacing: 2px;
+    background-color: rgb(60, 60, 60);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #E8F9FD;
+}
+
+.header{
+    padding: 100px;
+    padding-bottom: 25px;
+    background-color: #E8F9FD;
+    text-align: center;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.button{
+    display: flex;
+    background-color: #E8F9FD;
+    flex-direction: row;
+    justify-content: center;
+    border-spacing: 5px;
+    align-items: center;
+    text-align: center;
+    height: 15%;
+    width: auto;
+}
+
+.btn-1{
+    margin: 5px;
+    width: 300px;
+    height: 50px;
+    border: none;
+    color: #0AA1DD;
+    background-color: #79DAE8;
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 0 #0AA1DD;
+    transition: ease-out 0.3s;
+    font-size: 2rem;
+    outline: none;
+}
+
+.btn-1:hover{
+    box-shadow: inset 300px 0 0 0 #0AA1DD;
+    cursor: pointer;
+    color: #79DAE8;
+}
+
+.btn-2{
+    margin: 5px;
+    width: 300px;
+    height: 50px;
+    border: none;
+    color: #0AA1DD;
+    background-color: #79DAE8;
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 0 #0AA1DD;
+    transition: ease-out 0.3s ;
+    font-size: 2rem;
+    outline: none;
+}
+
+.btn-2:hover{
+    box-shadow: inset 300px 0 0 0 #0AA1DD;
+    cursor: pointer;
+    color: #79DAE8;
+}
+
+.btn1{
+    margin: 5px;
+    width: 300px;
+    height: 50px;
+    border: none;
+    color: #0AA1DD;
+    background-color: #79DAE8;
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 0 #0AA1DD;
+    transition: ease-out 0.3s ;
+    font-size: 2rem;
+    outline: none;
+}
+
+.btn1:hover{
+    box-shadow: inset 300px 0 0 0 #0AA1DD;
+    cursor: pointer;
+    color: #79DAE8;
+}
+
+.form{
+    background-color: #E8F9FD;
+    width: 600px;
+    height: 150px;
+    position: relative;
+}
+
+.form textarea{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: 4px solid #79DAE8;
+    border-radius: 10px;
+    outline: none;
+    padding: 10px 10px;
+    font-size: 20px;
+    color: #0AA1DD;
+    resize: none;
+}
+
+.form label{
+    background-color: #E8F9FD;
+    position: absolute;
+    top: 14px;
+    left: 15px;
+    color: #0AA1DD;
+    font-size: 18px;
+    transition: top .3s;
+    padding: 0 5px;
+}
+
+/* .form textarea:focus + label{
+    top: -9px
+} */
+.form textarea:focus+label,
+.form textarea:valid+label {
+    top: -11px;
+}
+.submit{
+    margin-left: 180px;
+    margin-top: 20px;
+    width: 40%;
+    height: 40%;
+    border: none;
+    color: #0AA1DD;
+    background-color: #79DAE8;
+    border-radius: 20px;
+    box-shadow: inset 0 0 0 0 #0AA1DD;
+    transition: all 0.3s ;
+    font-size: 2rem;
+    outline: none;
+}
+
+.submit:hover{
+    box-shadow: inset 300px 0 0 0 #0AA1DD;
+    cursor: pointer;
+    color: #79DAE8;
+}
+</style>
+
+</head>    
+
+<body> 
+    <script>
+        var btn = document.getElementById("button1");
+        var txt = document.getElementById("text1").value;
+        function clicked(){
+            console.log("clicked");
+        }
+        btn.addEventListener("click", clicked(), false);
+    </script>
+
+    <div class = "header" style="color: #051367;"> Text summarization </div>
+
+    <div class ="button">
+        <button class="btn-1" id="button1">Raw text</button>
+        <button class="btn-2">Link embedded</button>
+        <!-- <input type="button" class="btn1" value="Test"> -->
+    </div>    
+
+
+    <div class="form">
+        <textarea id="text1" type="text" placeholder=" " required></textarea>
+        <label for="">Raw text</label>
+        <button class="submit" type="submit">Summarize</button>
+        <br>
+            <p class="output" id="output1"></p>
+        <br>
+    </div>
+
+
+</body>
+</html>
