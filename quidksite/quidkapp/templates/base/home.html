@@ -148,7 +148,7 @@ body{
 .form textarea:valid+label {
     top: -11px;
 }
-.submit{
+button{
     margin-left: 180px;
     margin-top: 20px;
     width: 40%;
@@ -163,7 +163,7 @@ body{
     outline: none;
 }
 
-.submit:hover{
+button:hover{
     box-shadow: inset 300px 0 0 0 #0AA1DD;
     cursor: pointer;
     color: #79DAE8;
@@ -174,12 +174,9 @@ body{
 
 <body> 
     <script>
-        var btn = document.getElementById("button1");
-        var txt = document.getElementById("text1").value;
-        function clicked(){
-            console.log("clicked");
-        }
-        btn.addEventListener("click", clicked(), false);
+        var txt = document.getElementById("text1");
+
+        console.log(txt);
     </script>
 
     <div class = "header" style="color: #051367;"> Text summarization </div>
@@ -194,12 +191,9 @@ body{
     <div class="form">
         <textarea id="text1" type="text" placeholder=" " required></textarea>
         <label for="">Raw text</label>
-        <button class="submit" type="submit">Summarize</button>
-        <br>
-            <p class="output" id="output1"></p>
-        <br>
+        <button type="submit">Summarize</button>
     </div>
 
-
+    
 </body>
 </html>
