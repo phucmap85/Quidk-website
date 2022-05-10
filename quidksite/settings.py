@@ -27,7 +27,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1','quidk.com']
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -54,7 +53,7 @@ ROOT_URLCONF = 'quidksite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [r'D:\Quidk\quidksite\quidkapp\templates'],
+        'DIRS': [r'D:\Quidk-main\Quidk\quidksite\quidkapp\templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
