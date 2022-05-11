@@ -177,22 +177,26 @@ body{
     <div class ="button">
         <button class="btn-1" id="button1">Raw text</button>
         <button class="btn-2">Link embedded</button>
-    </div>
+        <!-- <input type="button" class="btn1" value="Test"> -->
+    </div>    
 
-    <form class="form">
+
+    <div class="form">
         <textarea id="text1" type="text" placeholder=" " required></textarea>
         <label for="">Raw text</label>
-        <button class="submit" type="submit" onclick="myFunction()">Summarize</button>
+        <button class="submit" type="submit" onclick="clicked()">Summarize</button>
         <br>
             <p class="output" id="output1"></p>
         <br>
-        <script>
-            function myFunction() {
-                var x = document.getElementById("text1").value;
-                console.log(x);
-            }
-        </script>
-    </form>
+    </div>
+
+    <script>
+        function clicked(){
+            var x = document.getElementById("text1").value;
+            console.log(x);
+        }
+    </script>
+
     
 </body>
 </html>
