@@ -7,7 +7,5 @@ Quidk is a summarization website for essays, scientific papers, thesis, web page
 All the libraries need for websites are in **requirements.txt**
 
 # Acknowledgments
-- [Nicholas Renotte](https://youtu.be/JctmnczWg0U)
-- [Hugging Face](https://huggingface.co/docs/transformers/tasks/summarization)
-- [Googletrans](https://py-googletrans.readthedocs.io/en/latest/)
-- [Flask](https://flask.palletsprojects.com/en/2.1.x/)
+- [AI Blog Post Summarization with Hugging Face Transformers & Beautiful Soup Web Scraping](https://youtu.be/JctmnczWg0U)
+- [Google Translate API with Python](https://www.youtube.com/watch?v=VIc_DDBpE7U)
