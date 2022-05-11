@@ -190,7 +190,23 @@ body{
     <script>
         function clicked(){
             var x = document.getElementById("text1").value;
-            console.log(x);
+            pass_values(x);
+        }
+
+        function pass_values(x) {
+            $.ajax({
+                type:'POST',
+                contentType:'application/json;charset-utf-08',
+                dataType:'json',
+                url:'http://127.0.0.1:8000/home?value='+x,
+                success:function (data) {
+                    var reply = data.reply;
+                    if(reply == "success") return;
+                    else {
+                        alert("Some error ocured in session agent");
+                    }
+                }
+            });
         }
     </script>
 
