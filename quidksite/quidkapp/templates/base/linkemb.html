@@ -51,7 +51,7 @@ body{
 }
 
 .btn-1{
-    margin: 5px;
+    margin: 2.5px;
     width: 300px;
     height: 50px;
     border: none;
@@ -71,7 +71,7 @@ body{
 }
 
 .btn-2{
-    margin: 5px;
+    margin: 2.5px;
     width: 300px;
     height: 50px;
     border: none;
@@ -150,6 +150,7 @@ body{
 .submit{
     margin: 180px;
     margin-top: 20px;
+    margin-bottom: 20px;
     width: 40%;
     height: 120%;
     border: none;
@@ -167,6 +168,18 @@ body{
     cursor: pointer;
     color: #79DAE8;
 }
+.form p{
+    width: 100%;
+    height: 300%;
+    background: transparent;
+    border: 4px solid #79DAE8;
+    border-radius: 10px;
+    outline: none;
+    padding: 10px 10px;
+    font-size: 20px;
+    color: #0AA1DD;
+    overflow: auto;
+}
 </style>
 
 </head>    
@@ -182,15 +195,19 @@ body{
 
 
     <div class="form">
-        <input id="text1" type="text" placeholder=" " required>
+        <input id="text2" type="text" placeholder=" " required>
         <label for="">Link embedded</label>
         <button class="submit" type="submit" onclick="clicked()">Summarize</button>
+        <p id="output">Result</p>
     </div>
 
     <script>
         function clicked(){
-            var x = document.getElementById("text1").value;
-            console.log(x);
+            var x = document.getElementById("text2").value;
+
+            //print x in the result box:
+            document.getElementById("output").innerHTML = x;
+            // console.log(x);
         }
     </script>
 
