@@ -8,4 +8,4 @@ def home (request):
     return render(request, 'base/home.html')
 
 def sub (request):
-    return render(request, 'base/sub.html')
+    return render(request, 'base/linkemb.html')
