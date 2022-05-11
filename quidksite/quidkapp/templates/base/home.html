@@ -55,20 +55,20 @@ body{
     width: 300px;
     height: 50px;
     border: none;
-    color: #0AA1DD;
-    background-color: #79DAE8;
+    color: #79DAE8;
+    background-color: #0AA1DD;
     border-radius: 10px;
-    box-shadow: inset 0 0 0 0 #0AA1DD;
-    transition: ease-out 0.3s;
+    /* box-shadow: inset 0 0 0 0 #79DAE8;
+    transition: ease-out 0.3s; */
     font-size: 2rem;
     outline: none;
 }
 
-.btn-1:hover{
-    box-shadow: inset 300px 0 0 0 #0AA1DD;
+/* .btn-1:hover{
+    box-shadow: inset 300px 0 0 0 #79DAE8;
     cursor: pointer;
-    color: #79DAE8;
-}
+    color: #0AA1DD;
+} */
 
 .btn-2{
     margin: 5px;
@@ -175,8 +175,8 @@ body{
     <div class = "header" style="color: #051367;"> Text summarization </div>
 
     <div class ="button">
-        <button class="btn-1" id="button1">Raw text</button>
-        <button class="btn-2">Link embedded</button>
+        <button class="btn-1">Raw text</button>
+        <button class="btn-2" onclick="window.location.href = '/linkemb';">Link embedded</button>
         <!-- <input type="button" class="btn1" value="Test"> -->
     </div>    
 
@@ -185,9 +185,6 @@ body{
         <textarea id="text1" type="text" placeholder=" " required></textarea>
         <label for="">Raw text</label>
         <button class="submit" type="submit" onclick="clicked()">Summarize</button>
-        <br>
-            <p class="output" id="output1"></p>
-        <br>
     </div>
 
     <script>
