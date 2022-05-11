@@ -4,6 +4,8 @@
 
 ## Prerequisites
 - [Flask](https://flask.palletsprojects.com/en/2.1.x/)
+- [TensorFlow](https://www.tensorflow.org/)
+- [PyTorch](https://pytorch.org/)
 - [Beautiful Soup](https://realpython.com/beautiful-soup-web-scraper-python/)
 - [Hugging Face Transformers](http://huggingface.co/docs/transformers)
 - [Googletrans](https://py-googletrans.readthedocs.io/en/latest/)
