@@ -182,6 +182,68 @@ body{
     color: #0AA1DD;
     overflow: auto;
 }
+
+.container{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    max-width: 800px;
+    height: 40px;
+    color: #555;
+}
+
+.check{
+    top: 7.5px;
+    margin-bottom: 50px;
+    position: relative;
+    width: 50px;
+}
+
+.check:before{
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 25px;
+    background: #333;
+    border-radius: 25px;
+}
+
+.check:checked:before{
+    background-color: #0AA1DD;
+}
+
+.check:after{
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: #fff;
+    border-radius: 25px;
+    transition: 0.01s;
+    border: 2px solid #333;
+    box-sizing: border-box;
+}
+
+.check:checked:after{
+    left: 25px;
+    border: 2px solid #00a1ff;
+}
+
+.en{
+    margin-right: 5px;
+    background-color: transparent;
+    position: relative;
+    font-size: 25px;
+    color: #333;
+}
+
+.vn{
+    margin-left: 5px;
+    background-color: transparent;
+    position: relative;
+    font-size: 25px;
+    color: #0AA1DD;
+}
 </style>
 
 </head>    
@@ -199,12 +261,23 @@ body{
     <div class="form">
         <textarea id="text1" type="text" placeholder=" " required></textarea>
         <label for="">Raw text</label>
-        <button class="submit" type="submit" onclick="clicked()">Summarize</button>
+        
+        <div class="container">
+            <span class="en">English</span>
+            <input type="checkbox" class="check" onchange="Changed(this)">
+            <span class="vn">Vietnamese</span>
+            <!-- <input type="checkbox" class="check"> -->
+
+        </div>
+
+        <button class="submit" type="submit" onclick=="clicked()">Summarize</button>
         <p id="output">Result</input>
     </div>
 
     <script>
         function clicked(){
+            const button = document.querySelector('submit')
+            button.disable = True;
             document.getElementById("output").innerHTML = "Loading...";
             var x = document.getElementById("text1").value;
             let userInput = {'text' : x}
@@ -214,8 +287,17 @@ body{
             request.onload = () => {
                 const flaskMessage = request.responseText
                 document.getElementById("output").innerHTML = flaskMessage;
+                button.disable = False;
             }
             request.send(JSON.stringify(userInput));
+        }
+
+        function Changed(checkboxElem) {
+            var language = new String("en");
+            if (checkboxElem.checked) {
+                language = new String("vn");
+            }
+        // console.log(language);
         }
     </script>
 
