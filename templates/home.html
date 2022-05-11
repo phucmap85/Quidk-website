@@ -206,8 +206,6 @@ body{
     <script>
         function clicked(){
             document.getElementById("output").innerHTML = "Loading...";
-            const button = document.querySelector('submit')
-            button.disable = True;
             var x = document.getElementById("text1").value;
             let userInput = {'text' : x}
             const request = new XMLHttpRequest();
@@ -216,7 +214,6 @@ body{
             request.onload = () => {
                 const flaskMessage = request.responseText
                 document.getElementById("output").innerHTML = flaskMessage;
-                button.disable = False;
             }
             request.send(JSON.stringify(userInput));
         }
