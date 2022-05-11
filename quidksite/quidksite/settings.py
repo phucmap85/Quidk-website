@@ -54,7 +54,7 @@ ROOT_URLCONF = 'quidksite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [r'D:\Quidk\quidksite\quidkapp\templates'],
+        'DIRS': [r'C:\Users\ASUS\Documents\Codes\PY\Projects\quidksite\quidkapp\templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

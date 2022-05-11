@@ -127,7 +127,6 @@ body{
     padding: 10px 10px;
     font-size: 20px;
     color: #0AA1DD;
-    resize: none;
 }
 
 .form label{
@@ -148,8 +147,8 @@ body{
 .form textarea:valid+label {
     top: -11px;
 }
-button{
-    margin-left: 180px;
+.submit{
+    margin: 180px;
     margin-top: 20px;
     width: 40%;
     height: 40%;
@@ -163,7 +162,7 @@ button{
     outline: none;
 }
 
-button:hover{
+.submit:hover{
     box-shadow: inset 300px 0 0 0 #0AA1DD;
     cursor: pointer;
     color: #79DAE8;
@@ -173,11 +172,13 @@ button:hover{
 </head>    
 
 <body> 
-    <script>
-        var txt = document.getElementById("text1");
-
-        console.log(txt);
-    </script>
+    <!-- <script>
+        var btn = document.getElementById("button1");
+        function clicked(){
+            console.log("clicked");
+        }
+        btn.addEventListener("click", clicked(), false);
+    </script> -->
 
     <div class = "header" style="color: #051367;"> Text summarization </div>
 
@@ -191,7 +192,10 @@ button:hover{
     <div class="form">
         <textarea id="text1" type="text" placeholder=" " required></textarea>
         <label for="">Raw text</label>
-        <button type="submit">Summarize</button>
+        <button class="submit" type="submit">Summarize</button>
+        <br>
+            <p class="output" id="output1"></p>
+        <br>
     </div>
 
     
