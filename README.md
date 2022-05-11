@@ -4,7 +4,8 @@ Quidk is a summarization website for essays, scientific papers, thesis, web page
 
 ## Libraries
 
-All the libraries need for website are in **requirements.txt**.\n
+All the libraries need for website are in **requirements.txt**.</br>
+
 Use **"pip install .\requirements.txt"** to install.
 
 # Acknowledgments
