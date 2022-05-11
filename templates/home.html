@@ -206,10 +206,19 @@ body{
     <script>
         function clicked(){
             var x = document.getElementById("text1").value;
-            document.getElementById("output").innerHTML = x;
+            console.log(x);
+            let userInput = {
+                'text' : x,
+            }
+            const request = new XMLHttpRequest();
+            request.open('POST', `/home/${JSON.stringify(userInput)}`);
+            request.onload = () => {
+                const flaskMessage = request.responseText
+                document.getElementById("output").innerHTML = flaskMessage;
+            }
+            request.send();
         }
     </script>
 
-    
 </body>
 </html>

@@ -1,1 +1,41 @@
-11.000 quân nhân Nga, 131 đơn vị quân đội và 77 máy bay và trực thăng sẽ tham gia lễ duyệt binh. Lễ diễu binh Chiến thắng năm nay diễn ra trong bối cảnh nước này mở chiến dịch quân sự đặc biệt nhằm “phi quân sự hóa và diệt phát xít Ukraine”. Cuộc Chiến tranh Vệ quốc vĩ đại (1941-1945) là cuộc chiến lớn nhất và gây thương vong nặng nề. năm 2020, Lễ duyệt binh Chiến thắng ở Moscow đã bị hoãn lại do đại dịch Covid-19. tuy nhiên, vào năm 2020, cuộc duyệt binh đã bị trì hoãn đến ngày 24 tháng 6.
+summarizer = pipeline("summarization")
+
+def LongFormSummarize(URL):
+    r = requests.get(URL)
+
+    soup = BeautifulSoup(r.text, 'html.parser')
+    results = soup.find_all(['h1', 'p'])
+    text = [result.text for result in results]
+    ARTICLE = ' '.join(text)
+
+    max_chunk = 500
+
+    ARTICLE = ARTICLE.replace('.', '.<eos>')
+    ARTICLE = ARTICLE.replace('?', '?<eos>')
+    ARTICLE = ARTICLE.replace('!', '!<eos>')
+
+    sentences = ARTICLE.split('<eos>')
+
+    current_chunk = 0 
+    chunks = []
+
+    for sentence in sentences:
+        if len(chunks) == current_chunk + 1: 
+            if len(chunks[current_chunk]) + len(sentence.split(' ')) <= max_chunk:
+                chunks[current_chunk].extend(sentence.split(' '))
+            else:
+                current_chunk += 1
+                chunks.append(sentence.split(' '))
+        else:
+            chunks.append(sentence.split(' '))
+
+    for chunk_id in range(len(chunks)):
+        chunks[chunk_id] = ' '.join(chunks[chunk_id])
+
+    translator = Translator()
+    translated = translator.translate(chunks, dest='en')
+    final_text = [trans.text for trans in translated]
+    res = summarizer(final_text, max_length=200, min_length=30, do_sample=False)
+    final_com = ' '.join([summ['summary_text'] for summ in res])
+    pp = translator.translate(final_com, dest=translator.detect(chunks)[0].lang)
+    return pp.text;
