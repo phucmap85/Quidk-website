@@ -2,6 +2,15 @@
 
 **Quidk** is a summarization website for essays, scientific papers, thesis, web pages,... brings convenience in learning for students and teachers.
 
+## Functionality
+The website is capable of performing 2 kinds of text summarization tasks:
+
+- By raw text:
+![image](https://user-images.githubusercontent.com/58034112/167919156-3609cb40-9518-4f1b-ba84-98ff295f2971.png)
+
+- By link embedded:
+![image](https://user-images.githubusercontent.com/58034112/167920052-5d5d1668-ed36-4a81-b8bb-00581e640fa9.png)
+
 ## Prerequisites
 - [Flask](https://flask.palletsprojects.com/en/2.1.x/)
 - [TensorFlow](https://www.tensorflow.org/)
