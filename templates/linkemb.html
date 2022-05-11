@@ -201,12 +201,21 @@ body{
     </div>
 
     <script>
-        function clicked(){
+        function clicked() {
+            const button = document.querySelector('submit')
+            button.disable = True;
+            document.getElementById("output").innerHTML = "Loading...";
             var x = document.getElementById("text2").value;
-
-            //print x in the result box:
-            document.getElementById("output").innerHTML = x;
-            // console.log(x);
+            let userInput = {'text' : x}
+            const request = new XMLHttpRequest();
+            request.open("POST", "/linkemb");
+            request.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+            request.onload = () => {
+                const flaskMessage = request.responseText
+                document.getElementById("output").innerHTML = flaskMessage;
+                button.disable = False;
+            }
+            request.send(JSON.stringify(userInput));
         }
     </script>
 

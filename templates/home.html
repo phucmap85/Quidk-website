@@ -205,18 +205,20 @@ body{
 
     <script>
         function clicked(){
+            const button = document.querySelector('submit')
+            button.disable = True;
+            document.getElementById("output").innerHTML = "Loading...";
             var x = document.getElementById("text1").value;
-            console.log(x);
-            let userInput = {
-                'text' : x,
-            }
+            let userInput = {'text' : x}
             const request = new XMLHttpRequest();
-            request.open('POST', `/home/${JSON.stringify(userInput)}`);
+            request.open("POST", "/home");
+            request.setRequestHeader("Content-type","application/x-www-form-urlencoded");
             request.onload = () => {
                 const flaskMessage = request.responseText
                 document.getElementById("output").innerHTML = flaskMessage;
+                button.disable = False;
             }
-            request.send();
+            request.send(JSON.stringify(userInput));
         }
     </script>
 
