@@ -1,0 +1,3 @@
+# Quidk - Text summarization
+
+Quidk is a summarization website for essays, scientific papers, thesis, web pages,...
