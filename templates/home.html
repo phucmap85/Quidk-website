@@ -274,29 +274,26 @@ body{
     </div>
 
     <script>
+        var language = new String("en");
+        function Changed(checkboxElem) {
+            language = new String("en");
+            if (checkboxElem.checked) {
+                language = new String("vi");
+            }
+        }
+
         function clicked(){
-            const button = document.querySelector('submit')
-            button.disable = True;
             document.getElementById("output").innerHTML = "Loading...";
             var x = document.getElementById("text1").value;
-            let userInput = {'text' : x}
+            let userInput = {'text' : x, 'lang': language}
             const request = new XMLHttpRequest();
             request.open("POST", "/home");
             request.setRequestHeader("Content-type","application/x-www-form-urlencoded");
             request.onload = () => {
                 const flaskMessage = request.responseText
                 document.getElementById("output").innerHTML = flaskMessage;
-                button.disable = False;
             }
             request.send(JSON.stringify(userInput));
-        }
-
-        function Changed(checkboxElem) {
-            var language = new String("en");
-            if (checkboxElem.checked) {
-                language = new String("vn");
-            }
-        // console.log(language);
         }
     </script>
 
