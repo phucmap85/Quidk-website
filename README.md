@@ -46,5 +46,5 @@ Le Quang Phuc</br>
 Huynh Tan Phuc
 
 ## Feedback and contributions
-If you have a feature request or run into issues using the website, please [file an issue](https://github.com/lqphuc123/Quidk/issues).
+If you have a feature request or run into issues using the website, please [file an issue](https://github.com/lqphuc123/Quidk/issues).</br>
 Thank you for your contributing.
