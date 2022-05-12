@@ -26,7 +26,7 @@ The website is capable of performing 2 kinds of text summarization tasks:
 
 All the libraries need for website are in **requirements.txt**.</br>
 
-Use **"pip install .\requirements.txt"** to install.
+Use **"pip install -r .\requirements.txt"** to install.
 
 ## Running the tests
 Use **"python .\run.py"** to run the website.</br>
