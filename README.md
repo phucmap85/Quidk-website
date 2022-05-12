@@ -40,3 +40,10 @@ Default address: http://127.0.0.1:5000
 ## Acknowledgments
 - [AI Blog Post Summarization with Hugging Face Transformers & Beautiful Soup Web Scraping](https://youtu.be/JctmnczWg0U)
 - [Google Translate API with Python](https://www.youtube.com/watch?v=VIc_DDBpE7U)
+
+## Credits
+Le Quang Phuc</br>
+Huynh Tan Phuc
+
+## Feedback and contributions
+If you have a feature request or run into issues using the website, please [file an issue](https://github.com/lqphuc123/Quidk/issues).
