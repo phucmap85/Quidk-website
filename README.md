@@ -13,6 +13,9 @@ The website is capable of performing 2 kinds of text summarization tasks:
 
 ![image](https://user-images.githubusercontent.com/58034112/167920052-5d5d1668-ed36-4a81-b8bb-00581e640fa9.png)
 
+***UPDATE: Add translate options for 2 languages: Vietnamese and English***
+![image](https://user-images.githubusercontent.com/58034112/168003602-7b3db63f-db37-44fd-80a8-478994f6f561.png)
+
 
 ## Prerequisites
 - [Flask](https://flask.palletsprojects.com/en/2.1.x/)
