@@ -30,10 +30,10 @@ The website is capable of performing 2 kinds of text summarization tasks:
 
 All the libraries need for website are in **requirements.txt**.</br>
 
-Using **"pip install -r .\requirements.txt"** to install.
+Use `pip install -r .\requirements.txt` to install.
 
 ## Running the tests
-Using **"python .\run.py"** to run the website.</br>
+Use `python .\run.py` to run the website.</br>
 
 Default address: http://127.0.0.1:5000
 
@@ -42,8 +42,8 @@ Default address: http://127.0.0.1:5000
 - [Google Translate API with Python](https://www.youtube.com/watch?v=VIc_DDBpE7U)
 
 ## Credits
-Le Quang Phuc</br>
-Huynh Tan Phuc
+[Le Quang Phuc](https://www.facebook.com/phuc.lequang.9081/)</br>
+[Huynh Tan Phuc](https://www.facebook.com/HtPuc)
 
 ## Feedback and contributions
 If you have a feature request or run into issues using the website, please [file an issue](https://github.com/lqphuc123/Quidk/issues).</br>
