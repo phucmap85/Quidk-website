@@ -46,5 +46,5 @@ Default address: http://127.0.0.1:5000
 [Huynh Tan Phuc](https://www.facebook.com/HtPuc)
 
 ## Feedback and contributions
-If you have a feature request or run into issues using the website, please [file an issue](https://github.com/lqphuc123/Quidk/issues).</br>
+If you have a feature request or run into issues using the website, please [fill an issue](https://github.com/lqphuc123/Quidk/issues).</br>
 Thank you for your contributing.
