@@ -1,10 +1,7 @@
-from curses import flash
-from flask import Flask, render_template, url_for, request
-import json
+from flask import Flask, render_template, request
 from transformers import pipeline
 from bs4 import BeautifulSoup
 import requests
-import googletrans
 from googletrans import Translator
 
 app = Flask(__name__);
