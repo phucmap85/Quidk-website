@@ -50,7 +50,7 @@ body{
     width: auto;
 }
 
-.btn-1{
+.text-btn{
     margin: 2.5px;
     width: 300px;
     height: 50px;
@@ -64,13 +64,7 @@ body{
     outline: none;
 }
 
-/* .btn-1:hover{
-    box-shadow: inset 300px 0 0 0 #79DAE8;
-    cursor: pointer;
-    color: #0AA1DD;
-} */
-
-.btn-2{
+.link-btn{
     margin: 2.5px;
     width: 300px;
     height: 50px;
@@ -84,14 +78,15 @@ body{
     outline: none;
 }
 
-.btn-2:hover{
+.link-btn:hover{
     box-shadow: inset 300px 0 0 0 #0AA1DD;
     cursor: pointer;
     color: #79DAE8;
 }
 
-.btn1{
-    margin: 5px;
+
+.file-btn{
+    margin: 2.5px;
     width: 300px;
     height: 50px;
     border: none;
@@ -104,7 +99,7 @@ body{
     outline: none;
 }
 
-.btn1:hover{
+.file-btn:hover{
     box-shadow: inset 300px 0 0 0 #0AA1DD;
     cursor: pointer;
     color: #79DAE8;
@@ -252,8 +247,9 @@ body{
     <div class = "header" style="color: #051367;"> Text summarization </div>
 
     <div class ="button">
-        <button class="btn-1">Raw text</button>
-        <button class="btn-2" onclick="window.location.href = '/linkemb';">Link embedded</button>
+        <button class="text-btn">Raw text</button>
+        <button class="link-btn" onclick="window.location.href = '/linkemb';">Link embedded</button>
+        <button class="file-btn" onclick="window.location.href = '/filemb';">File embedded</button>
         <!-- <input type="button" class="btn1" value="Test"> -->
     </div>    
 
