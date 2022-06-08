@@ -1,3 +1,6 @@
+import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '1'
+
 from flask import Flask, render_template, request
 from transformers import pipeline
 from bs4 import BeautifulSoup
@@ -58,11 +61,6 @@ def TextSummarize(Text, lang):
     else:
         pp = translator.translate(res[0]['summary_text'], dest=lang)
         return pp.text
-<<<<<<< HEAD
-
-
-=======
->>>>>>> d7dde6b70cf8f4389c75475b1a0a71b8cd7f5dd3
 
 @app.route("/")
 def first():
@@ -87,7 +85,6 @@ def getText():
 
 @app.route('/linkemb', methods=['POST'])
 def getLink():
-<<<<<<< HEAD
     userInput = request.get_json(force=True)
     return LinkSummarize(userInput['text'], userInput['lang'])
 
@@ -95,10 +92,6 @@ def getLink():
 # def getFile():
 #     userInput = request.get_json(force=True)
 #     return FileSummarize(userInput['text'], userInput['Lang'])
-=======
-    userInput = request.get_json(force=True);
-    return LinkSummarize(userInput['text'], userInput['lang'])
->>>>>>> d7dde6b70cf8f4389c75475b1a0a71b8cd7f5dd3
 
 if __name__ == "__main__":
     app.run(debug = True)
