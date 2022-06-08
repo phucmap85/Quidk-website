@@ -1,0 +1,296 @@
+<!-- & c:/Users/ASUS/Documents/Codes/PY/Projects/env/bin/Activate.ps1 -->
+
+<!DOCTYPE html>
+<html>    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quidk</title>
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+*{
+    font-family: 'Noto Sans', sans-serif;
+    letter-spacing: 2px;
+    background-color: #E8F9FD;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #E8F9FD;
+}
+
+.header{
+    padding: 100px;
+    padding-bottom: 25px;
+    background-color: #E8F9FD;
+    text-align: center;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.button{
+    display: flex;
+    background-color: #E8F9FD;
+    flex-direction: row;
+    justify-content: center;
+    border-spacing: 5px;
+    align-items: center;
+    text-align: center;
+    height: 15%;
+    width: auto;
+}
+
+.text-btn{
+    margin: 2.5px;
+    width: 300px;
+    height: 50px;
+    border: none;
+    color: #0AA1DD;
+    background-color: #79DAE8;
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 0 #0AA1DD;
+    transition: ease-out 0.3s ;
+    font-size: 2rem;
+    outline: none;
+}
+
+.text-btn:hover{
+    box-shadow: inset 300px 0 0 0 #0AA1DD;
+    cursor: pointer;
+    color: #79DAE8;
+}
+
+.link-btn{
+    margin: 2.5px;
+    width: 300px;
+    height: 50px;
+    border: none;
+    color: #0AA1DD;
+    background-color: #79DAE8;
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 0 #0AA1DD;
+    transition: ease-out 0.3s ;
+    font-size: 2rem;
+    outline: none;
+}
+
+.link-btn:hover{
+    box-shadow: inset 300px 0 0 0 #0AA1DD;
+    cursor: pointer;
+    color: #79DAE8;
+}
+
+.file-btn{
+    margin: 2.5px;
+    width: 300px;
+    height: 50px;
+    border: none;
+    color: #79DAE8;
+    background-color: #0AA1DD;
+    border-radius: 10px;
+    /* box-shadow: inset 0 0 0 0 #79DAE8;
+    transition: ease-out 0.3s; */
+    font-size: 2rem;
+    outline: none;
+}
+
+.form{
+    background-color: #E8F9FD;
+    width: 600px;
+    height: 150px;
+    position: relative;
+    outline: none;
+}
+
+.form input[type='file']{
+    margin: 50px;
+    color: #051367;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    font-size: 25px;
+    background: #79DAE8;
+    border-radius: 30px;
+    width: 500px;
+}
+
+::-webkit-file-upload-button{
+    color: #79DAE8;
+    background: #0AA1DD;
+    border: none;
+    padding: 5px;
+    border-radius: 30px;
+    outline: none;
+    box-shadow: inset 0 0 0 0 #0AA1DD;
+    transition: ease-out 0.6s;
+}
+
+::-webkit-file-upload-button:hover{
+    box-shadow: inset 300px 0 0 0 #051367;
+    cursor: pointer;
+    color: #0AA1DD;
+}
+
+.submit{
+    margin: 180px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 40%;
+    height: 40%;
+    border: none;
+    color: #0AA1DD;
+    background-color: #79DAE8;
+    border-radius: 20px;
+    box-shadow: inset 0 0 0 0 #0AA1DD;
+    transition: all 0.3s ;
+    font-size: 2rem;
+    outline: none;
+}
+
+.submit:hover{
+    box-shadow: inset 300px 0 0 0 #0AA1DD;
+    cursor: pointer;
+    color: #79DAE8;
+}
+
+.form p{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: 4px solid #79DAE8;
+    border-radius: 10px;
+    outline: none;
+    padding: 10px 10px;
+    font-size: 20px;
+    color: #0AA1DD;
+    overflow: auto;
+}
+
+.container{
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    max-width: 800px;
+    height: 40px;
+    color: #555;
+}
+
+.check{
+    top: 7.5px;
+    margin-bottom: 50px;
+    position: relative;
+    width: 50px;
+}
+
+.check:before{
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 25px;
+    background: #333;
+    border-radius: 25px;
+}
+
+.check:checked:before{
+    background-color: #0AA1DD;
+}
+
+.check:after{
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: #fff;
+    border-radius: 25px;
+    transition: 0.01s;
+    border: 2px solid #333;
+    box-sizing: border-box;
+}
+
+.check:checked:after{
+    left: 25px;
+    border: 2px solid #00a1ff;
+}
+
+.en{
+    margin-right: 5px;
+    background-color: transparent;
+    position: relative;
+    font-size: 25px;
+    color: #333;
+}
+
+.vn{
+    margin-left: 5px;
+    background-color: transparent;
+    position: relative;
+    font-size: 25px;
+    color: #0AA1DD;
+}
+</style>
+
+</head>    
+
+<body> 
+    <div class = "header" style="color: #051367;"> Text summarization </div>
+
+    <div class ="button">
+        <button class="text-btn" onclick="window.location.href = '/home';">Raw text</button>
+        <button class="link-btn" onclick="window.location.href = '/linkemb';">Link embedded</button>
+        <button class="file-btn">File embedded</button>
+        <!-- <input type="button" class="btn1" value="Test"> -->
+    </div>    
+
+
+    <div class="form">
+        <input type="File" id="file" accept=".doc, .docx, .pdf" placeholder=" ">
+        <!-- <label for="file">Import text</label> -->
+        
+        
+        <div class="container">
+            <span class="en">English</span>
+            <input type="checkbox" class="check" onchange="Changed(this)">
+            <span class="vn">Vietnamese</span>
+            <!-- <input type="checkbox" class="check"> -->
+        </div>
+
+        <button class="submit" type="submit" onclick="clicked()">Summarize</button>
+        <p id="output">Result</p>
+    </div>
+
+    <script>
+        var language = new String("en");
+        function Changed(checkboxElem) {
+            language = new String("en");
+            if (checkboxElem.checked) {
+                language = new String("vi");
+            }
+        }
+
+        function clicked(){
+            document.getElementById("output").innerHTML = "Loading...";
+            var x = document.getElementById("text1").value;
+            let userInput = {'text' : x, 'lang': language}
+            const request = new XMLHttpRequest();
+            request.open("POST", "/home");
+            request.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+            request.onload = () => {
+                const flaskMessage = request.responseText
+                document.getElementById("output").innerHTML = flaskMessage;
+            }
+            request.send(JSON.stringify(userInput));
+        }
+    </script>
+
+</body>
+</html>
