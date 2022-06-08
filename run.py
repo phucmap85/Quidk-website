@@ -58,6 +58,11 @@ def TextSummarize(Text, lang):
     else:
         pp = translator.translate(res[0]['summary_text'], dest=lang)
         return pp.text
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> d7dde6b70cf8f4389c75475b1a0a71b8cd7f5dd3
 
 @app.route("/")
 def first():
@@ -71,6 +76,10 @@ def page1():
 def page2():
     return render_template('linkemb.html')
 
+@app.route("/filemb")
+def page3():
+    return render_template('filemb.html')
+
 @app.route('/home', methods=['POST'])
 def getText():
     userInput = request.get_json(force=True)
@@ -78,8 +87,18 @@ def getText():
 
 @app.route('/linkemb', methods=['POST'])
 def getLink():
+<<<<<<< HEAD
+    userInput = request.get_json(force=True)
+    return LinkSummarize(userInput['text'], userInput['lang'])
+
+# @app.route('/filemb', method=['POST'])
+# def getFile():
+#     userInput = request.get_json(force=True)
+#     return FileSummarize(userInput['text'], userInput['Lang'])
+=======
     userInput = request.get_json(force=True);
     return LinkSummarize(userInput['text'], userInput['lang'])
+>>>>>>> d7dde6b70cf8f4389c75475b1a0a71b8cd7f5dd3
 
 if __name__ == "__main__":
     app.run(debug = True)
