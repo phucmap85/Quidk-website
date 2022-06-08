@@ -34,7 +34,7 @@ You will need [Python 3.7 or later](https://www.python.org/downloads/) and [a C+
 
 ### Install Dependencies
 
-All the libraries need for Botiris are in [requirements.txt](requirements.txt).</br>
+All the libraries need for Quidk are in [requirements.txt](requirements.txt).</br>
 
 Use `pip install -r .\requirements.txt` to install.
 
@@ -53,7 +53,6 @@ or follow some tutorial videos for [Windows](https://youtu.be/hHWkvEcDBO0?t=50) 
 **_Note:_** You could refer to the [cuDNN Support Matrix](https://docs.nvidia.com/deeplearning/cudnn/pdf/cuDNN-Support-Matrix.pdf) for cuDNN versions with the various supported CUDA, CUDA driver and NVIDIA hardwares.
 
 If you want to disable CUDA support, export the environment variable `USE_CUDA=0`.
-Other potentially useful environment variables may be found in `tracking.py`.
 
 If you want to run with **AMD GPU** support, install:
 - [AMD ROCm](https://rocmdocs.amd.com/en/latest/Installation_Guide/Installation-Guide.html) 4.0 and above installation.
@@ -62,7 +61,6 @@ If you want to run with **AMD GPU** support, install:
 or follow [this tutorial video](https://youtu.be/efKjfBkjPlM) for **Debian-based Linux distros**.
 
 If you want to disable ROCm support, export the environment variable `USE_ROCM=0`.
-Other potentially useful environment variables may be found in `tracking.py`.
 
 **_CUDA and ROCm are not supported on macOS._**
 
@@ -74,7 +72,7 @@ Other potentially useful environment variables may be found in `tracking.py`.
 
 Use `python .\run.py` to run the website.</br>
 
-Default address: http://127.0.0.1:5000
+Default address: `http://127.0.0.1:5000`
 
 ## Acknowledgments
 - [AI Blog Post Summarization with Hugging Face Transformers & Beautiful Soup Web Scraping](https://youtu.be/JctmnczWg0U)
@@ -86,8 +84,11 @@ Default address: http://127.0.0.1:5000
 
 ## Feedback and contributions
 
-If you have a feature request or run into issues using the website, please [fill an issue](https://github.com/lqphuc123/Quidk/issues).</br>
-Thank you for your contributing.
+Please let us know if you encounter a bug by [filing an issue](https://github.com/lqphuc123/Quidk/issues).
+
+We appreciate all contributions. If you are planning to contribute back bug-fixes, please do so without any further discussion.
+
+If you plan to contribute new features, utility functions, or extensions to the core, please first open an issue and discuss the feature with us.
 
 ## License
 
