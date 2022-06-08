@@ -1,6 +1,3 @@
-import os
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '1'
-
 from flask import Flask, render_template, request
 from transformers import pipeline
 from bs4 import BeautifulSoup
