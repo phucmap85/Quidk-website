@@ -1,10 +1,13 @@
+import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '1'
+
 from flask import Flask, render_template, request
 from transformers import pipeline
 from bs4 import BeautifulSoup
 import requests
 from googletrans import Translator
 
-app = Flask(__name__);
+app = Flask(__name__)
 
 summarizer = pipeline("summarization")
 
@@ -45,7 +48,7 @@ def LinkSummarize(URL, lang):
     res = summarizer(final_text, max_length=200, min_length=30, do_sample=False)
     final_com = ' '.join([summ['summary_text'] for summ in res])
     if(lang == "en"):
-        return final_com;
+        return final_com
     else:
         pp = translator.translate(final_com, dest=lang)
         return pp.text
@@ -57,11 +60,11 @@ def TextSummarize(Text, lang):
         return res[0]['summary_text']
     else:
         pp = translator.translate(res[0]['summary_text'], dest=lang)
-        return pp.text;
+        return pp.text
 
 @app.route("/")
 def first():
-    return page1();
+    return page1()
 
 @app.route("/home")
 def page1():
@@ -73,13 +76,13 @@ def page2():
 
 @app.route('/home', methods=['POST'])
 def getText():
-    userInput = request.get_json(force=True);
-    return TextSummarize(userInput['text'], userInput['lang']);
+    userInput = request.get_json(force=True)
+    return TextSummarize(userInput['text'], userInput['lang'])
 
 @app.route('/linkemb', methods=['POST'])
 def getLink():
     userInput = request.get_json(force=True);
-    return LinkSummarize(userInput['text'], userInput['lang']);
+    return LinkSummarize(userInput['text'], userInput['lang'])
 
 if __name__ == "__main__":
-    app.run(debug = True);
+    app.run(debug = True)
