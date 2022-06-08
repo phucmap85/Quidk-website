@@ -52,15 +52,11 @@ or follow some tutorial videos for [Windows](https://youtu.be/hHWkvEcDBO0?t=50) 
 
 **_Note:_** You could refer to the [cuDNN Support Matrix](https://docs.nvidia.com/deeplearning/cudnn/pdf/cuDNN-Support-Matrix.pdf) for cuDNN versions with the various supported CUDA, CUDA driver and NVIDIA hardwares.
 
-If you want to disable CUDA support, export the environment variable `USE_CUDA=0`.
-
 If you want to run with **AMD GPU** support, install:
 - [AMD ROCm](https://rocmdocs.amd.com/en/latest/Installation_Guide/Installation-Guide.html) 4.0 and above installation.
 - ROCm is currently supported only for **Linux systems**.
 
 or follow [this tutorial video](https://youtu.be/efKjfBkjPlM) for **Debian-based Linux distros**.
-
-If you want to disable ROCm support, export the environment variable `USE_ROCM=0`.
 
 **_CUDA and ROCm are not supported on macOS._**
 
@@ -68,7 +64,7 @@ If you want to disable ROCm support, export the environment variable `USE_ROCM=0
 
 **_Note:_** If you are building for NVIDIA's Jetson platforms (Jetson Nano, TX1, TX2, AGX Xavier), Instructions to install PyTorch for Jetson Nano are [available here](https://devtalk.nvidia.com/default/topic/1049071/jetson-nano/pytorch-for-jetson-nano/) or you can follow [tutorial video](https://youtu.be/UiZaM-Wbc6A).
 
-## Running the tests
+## How to run
 
 Use `python .\run.py` to run the website.</br>
 
