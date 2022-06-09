@@ -59,7 +59,7 @@ or follow [this tutorial video](https://youtu.be/efKjfBkjPlM) for **Debian-based
 
 **_CUDA and ROCm are not supported on macOS._**
 
-**_After that_**, install [TensorFlow](https://www.tensorflow.org/hub/installation#use_with_tensorflow_2) via Conda or pip wheels.
+**_After that_**, install [TensorFlow](https://www.tensorflow.org/hub/installation#use_with_tensorflow_2) via Conda or pip wheels using [build configurations](https://www.tensorflow.org/install/source#gpu).
 
 **_Note:_** If you are building for NVIDIA's Jetson platforms (Jetson Nano, TX1, TX2, AGX Xavier), Instructions to install PyTorch for Jetson Nano are [available here](https://devtalk.nvidia.com/default/topic/1049071/jetson-nano/pytorch-for-jetson-nano/) or you can follow [tutorial video](https://youtu.be/UiZaM-Wbc6A).
 
