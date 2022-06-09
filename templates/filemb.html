@@ -270,19 +270,20 @@ body{
 
     <script>
         var language = new String("en");
-        function Changed(checkboxElem) {
+        function LangChanged(checkboxElem) {
             language = new String("en");
             if (checkboxElem.checked) {
                 language = new String("vi");
             }
         }
 
-        function clicked(){
+        function clicked() {
             document.getElementById("output").innerHTML = "Loading...";
-            var x = document.getElementById("text1").value;
-            let userInput = {'text' : x, 'lang': language}
+            var x = document.getElementById("file").value;
+            const sep = x.split(".");
+            let userInput = {'lang': language, 'type': sep.at(-1)};
             const request = new XMLHttpRequest();
-            request.open("POST", "/home");
+            request.open("POST", "/filemb");
             request.setRequestHeader("Content-type","application/x-www-form-urlencoded");
             request.onload = () => {
                 const flaskMessage = request.responseText
@@ -290,6 +291,31 @@ body{
             }
             request.send(JSON.stringify(userInput));
         }
+    </script>
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyDxNVzf41GCNIY7i-DHtKA3Q-wLRC1aC9Y",
+            authDomain: "quidk-581d0.firebaseapp.com",
+            databaseURL: "https://quidk-581d0-default-rtdb.asia-southeast1.firebasedatabase.app",
+            projectId: "quidk-581d0",
+            storageBucket: "quidk-581d0.appspot.com",
+            messagingSenderId: "103191205735",
+            appId: "1:103191205735:web:ba18ddd9c24ca48be641c2",
+            measurementId: "G-JC3ZCRKWYN"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
     </script>
 
 </body>
