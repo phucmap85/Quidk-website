@@ -1,8 +1,16 @@
+import os
+
+import firebase_admin
+from firebase_admin import credentials
+from firebase_admin import storage
+
 from flask import Flask, render_template, request
 from transformers import pipeline
 from bs4 import BeautifulSoup
 import requests
 from googletrans import Translator
+import docx
+import pyrebase
 
 app = Flask(__name__)
 
@@ -10,6 +18,23 @@ summarizer = pipeline("summarization")
 
 translator = Translator()
 
+# File Summarization
+firebaseConfig = {
+    "apiKey": "AIzaSyDxNVzf41GCNIY7i-DHtKA3Q-wLRC1aC9Y",
+    "authDomain": "quidk-581d0.firebaseapp.com",
+    "databaseURL": "https://quidk-581d0-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "projectId": "quidk-581d0",
+    "storageBucket": "quidk-581d0.appspot.com",
+    "serviceAccount": "serviceAccountKey.json"
+}
+
+def FileSummarize(lang, type):
+    firebase = pyrebase.initialize_app(firebaseConfig)
+    rtd = firebase.storage()
+
+    rtd.child("example." + type).download("example." + type)
+
+# Link Summarization
 def LinkSummarize(URL, lang):
     r = requests.get(URL)
     soup = BeautifulSoup(r.text, 'html.parser')
@@ -50,6 +75,7 @@ def LinkSummarize(URL, lang):
         pp = translator.translate(final_com, dest=lang)
         return pp.text
 
+# Text Summarization
 def TextSummarize(Text, lang):
     translated = translator.translate(Text, dest='en')
     res = summarizer(translated.text, max_length=200, min_length=30, do_sample=False)
@@ -85,10 +111,10 @@ def getLink():
     userInput = request.get_json(force=True)
     return LinkSummarize(userInput['text'], userInput['lang'])
 
-# @app.route('/filemb', method=['POST'])
-# def getFile():
-#     userInput = request.get_json(force=True)
-#     return FileSummarize(userInput['text'], userInput['Lang'])
+@app.route('/filemb', method=['POST'])
+def getFile():
+    userInput = request.get_json(force=True)
+    return FileSummarize(userInput['lang'], userInput['type'])
 
 if __name__ == "__main__":
     app.run(debug = True)
