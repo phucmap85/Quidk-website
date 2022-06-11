@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Quidk",
-  "version": "1.0",
+  "version": "2.1.0.4",
   "description": "Text summarization",
   "action": {
     "default_icon": "assets/icon.png",
