@@ -1,5 +1,5 @@
-type = "pdf"
+from PyPDF2 import PdfFileReader
 
-k = "example." + type
+pdf = PdfFileReader('example.pdf')
 
-print(k)
+page1_object
