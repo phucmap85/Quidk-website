@@ -9,7 +9,7 @@ from transformers import pipeline
 from bs4 import BeautifulSoup
 import requests
 from googletrans import Translator
-import docx
+# import docx
 import pyrebase
 
 app = Flask(__name__)
@@ -28,11 +28,11 @@ firebaseConfig = {
     "serviceAccount": "serviceAccountKey.json"
 }
 
-def FileSummarize(lang, type):
-    firebase = pyrebase.initialize_app(firebaseConfig)
-    rtd = firebase.storage()
+# def FileSummarize(lang, type):
+#     firebase = pyrebase.initialize_app(firebaseConfig)
+#     rtd = firebase.storage()
 
-    rtd.child("example." + type).download("example." + type)
+#     rtd.child("example." + type).download("example." + type)
 
 # Link Summarization
 def LinkSummarize(URL, lang):
@@ -111,10 +111,10 @@ def getLink():
     userInput = request.get_json(force=True)
     return LinkSummarize(userInput['text'], userInput['lang'])
 
-@app.route('/filemb', method=['POST'])
-def getFile():
-    userInput = request.get_json(force=True)
-    return FileSummarize(userInput['lang'], userInput['type'])
+# @app.route('/filemb', method=['POST'])
+# def getFile():
+#     userInput = request.get_json(force=True)
+#     return FileSummarize(userInput['lang'], userInput['type'])
 
 if __name__ == "__main__":
     app.run(debug = True)
