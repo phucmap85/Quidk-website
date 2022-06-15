@@ -4,32 +4,35 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=chrome">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Content-Security-Policy" content="default-src * self blob: data: gap:; style-src * self 'unsafe-inline' blob: data: gap:; script-src * 'self' 'unsafe-eval' 'unsafe-inline' blob: data: gap:; object-src * 'self' blob: data: gap:; img-src * self 'unsafe-inline' blob: data: gap:; connect-src self * 'unsafe-inline' blob: data: gap:; frame-src * self blob: data: gap:;">
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<link rel="icon" href="assets/icon.png" />
+	<link rel="stylesheet" href="style.css">
 
-  <link rel="icon" href="assets/icon.png" />
-  <link rel="stylesheet" href="style.css">
-
-  <title>Quidk</title>
+	<title>Quidk</title>
 </head>
 
 <body>
 
-  <div class="header" style="color: #051367;"> Text summarization </div>
+	<div class="header" style="color: #051367;"> Text summarization </div>
 
-  <div class="form">
-    <div class="container">
-      <span class="en">English</span>
-      <input type="checkbox" class="check" id="checkbox">
-      <span class="vn">Vietnamese</span>
-      <!-- <input type="checkbox" class="check"> -->
-    </div>
+	<div class="form">
+		<textarea id="text1" type="text" placeholder=" " required></textarea>
+		<div class="container">
+			<span class="en">English</span>
+			<input type="checkbox" class="check" id="checkbox">
+			<span class="vn">Vietnamese</span>
+			<!-- <input type="checkbox" class="check"> -->
+		</div>
 
-    <button class="submit" type="submit" onclick="clicked()">Summarize</button>
-  </div>
+		<button class="submit" type="submit" onclick="clicked()">Summarize</button>
+		<p class="out" id="output">Result</p>
+	</div>
 
-  <script src="popup.js"></script>
+	<script src="popup.js"></script>
 </body>
 
 </html>
