@@ -10,9 +10,17 @@ document.getElementById("checkbox").addEventListener("change", (event)=>{
 	document.getElementById("output").innerHTML = language;
 });
 
-function clicked() {
-	chrome.tabs.query({active: true, lastFocusedWindow: true}, tabs => {
-		let url = tabs[0].url;
-		// use `url` here inside the callback because it's asynchronous!
+function clicked(){
+	document.getElementById("output").innerHTML = "Loading...";
+	var x = document.getElementById("text1").value;
+	jQuery.ajax({
+		type: "POST",
+		url: 'summarization.php',
+		dataType: 'json',
+		data: {text: x, lang: language},
+
+		success: function (obj, textstatus) {
+			console.log(obj);
+		}
 	});
 }
