@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quidk</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <style>
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
@@ -281,15 +282,16 @@ body{
         function clicked(){
             document.getElementById("output").innerHTML = "Loading...";
             var x = document.getElementById("text1").value;
-            let userInput = {'text' : x, 'lang': language}
-            const request = new XMLHttpRequest();
-            request.open("POST", "/home");
-            request.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-            request.onload = () => {
-                const flaskMessage = request.responseText
-                document.getElementById("output").innerHTML = flaskMessage;
-            }
-            request.send(JSON.stringify(userInput));
+            jQuery.ajax({
+                type: "POST",
+                url: 'summarization.php',
+                dataType: 'json',
+                data: {text: x, lang: language},
+
+                success: function (obj, textstatus) {
+                    document.getElementById("output").innerHTML = obj;
+                }
+            });
         }
     </script>
 
