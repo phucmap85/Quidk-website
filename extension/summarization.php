@@ -1,4 +1,4 @@
-<?php 
+<?php
 include_once('TextRankFacade.php');
 include_once('StopWords/Vietnamese.php');
 include_once('Tool/Parser.php');
