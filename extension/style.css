@@ -1,19 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 
-body{
-  width: 420px;
-  height: 100px;
-  text-align: center;
-  font-family: 'Noto Sans', sans-serif;
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: center;
-  background-color: #E8F9FD;
-  letter-spacing: 2px;
+body {
+    width: 360px;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    background-color: #E8F9FD;
+    letter-spacing: 2px;
+    border-radius: 25px;
 }
 
-.header{
+.default-font-family,
+body * {
+    font-family: "Poppins", sans-serif;
+}
+
+.header {
     /* padding-bottom: 5px; */
     background-color: #E8F9FD;
     text-align: center;
@@ -21,14 +26,14 @@ body{
     font-size: 25px;
 }
 
-.form{
+.form {
     background-color: #E8F9FD;
     width: 600px;
     height: 150px;
     position: relative;
 }
 
-.container{
+.container {
     margin-top: 20px;
     display: flex;
     justify-content: center;
@@ -38,14 +43,14 @@ body{
     color: #555;
 }
 
-.check{
+.check {
     top: 7.5px;
     margin-bottom: 50px;
     position: relative;
     width: 50px;
 }
 
-.check:before{
+.check:before {
     content: '';
     position: absolute;
     width: 50px;
@@ -54,11 +59,11 @@ body{
     border-radius: 25px;
 }
 
-.check:checked:before{
+.check:checked:before {
     background-color: #0AA1DD;
 }
 
-.check:after{
+.check:after {
     content: '';
     position: absolute;
     width: 25px;
@@ -70,12 +75,12 @@ body{
     box-sizing: border-box;
 }
 
-.check:checked:after{
+.check:checked:after {
     left: 25px;
     border: 2px solid #00a1ff;
 }
 
-.en{
+.en {
     margin-right: 5px;
     background-color: transparent;
     position: relative;
@@ -83,45 +88,55 @@ body{
     color: #333;
 }
 
-.vn{
+.vn {
     margin-left: 5px;
     background-color: transparent;
     position: relative;
     font-size: 25px;
     color: #0AA1DD;
 }
-.submit{
-  margin: auto;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  width: 50%;
-  height: 30%;
-  border: none;
-  color: #0AA1DD;
-  background-color: #79DAE8;
-  border-radius: 15px;
-  box-shadow: inset 0 0 0 0 #0AA1DD;
-  transition: all 0.3s ;
-  font-size: 1.5rem;
-  outline: none;
+
+.submit {
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 50%;
+    height: 30%;
+    border: none;
+    color: #0AA1DD;
+    background-color: #79DAE8;
+    border-radius: 15px;
+    box-shadow: inset 0 0 0 0 #0AA1DD;
+    transition: all 0.3s;
+    font-size: 1.5rem;
+    outline: none;
 }
 
-.submit:hover{
-  box-shadow: inset 300px 0 0 0 #0AA1DD;
-  cursor: pointer;
-  color: #79DAE8;
+.submit:hover {
+    box-shadow: inset 300px 0 0 0 #0AA1DD;
+    cursor: pointer;
+    color: #79DAE8;
 }
 
-.form p{
-  margin: auto;
-  width: 60%;
-  height: 60%;
-  background: transparent;
-  border: 4px solid #79DAE8;
-  border-radius: 10px;
-  outline: none;
-  padding: 10px 10px;
-  font-size: 20px;
-  color: #0AA1DD;
-  overflow: auto;
+.form .output {
+    margin: auto;
+    width: 90vw;
+    height: auto;
+    background: transparent;
+    border: 4px solid #79DAE8;
+    border-radius: 10px;
+    outline: none;
+    padding: 10px 10px;
+    font-size: 20px;
+    color: #0AA1DD;
+    overflow: auto;
+}
+
+.form .output p{
+    font-size: 20px;
+    color: #0AA1DD;
+}
+
+::-webkit-scrollbar{
+    display: none;
 }
