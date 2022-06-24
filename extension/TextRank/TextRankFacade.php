@@ -24,7 +24,7 @@
  */
 include_once('Tool/Parser.php');
 include_once('Tool/Graph.php');
-include_once("Tool/Score.php");
+include_once('Tool/Score.php');
 include_once('Tool/Summarize.php');
 include_once('Tool/Text.php');
 class TextRankFacade

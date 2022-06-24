@@ -1,19 +1,37 @@
 <?php
-include_once('TextRankFacade.php');
-include_once('StopWords/Vietnamese.php');
-include_once('Tool/Parser.php');
+    require_once('vendor/autoload.php');
+    include_once('TextRank/TextRankFacade.php');
+    include_once('TextRank/StopWords/Vietnamese.php');
+    include_once('TextRank/StopWords/English.php');
+    include_once('TextRank/Tool/Parser.php');
+    header('Content-Type: application/json; charset=utf-8');
 
-header('Content-Type: application/json');
+    $url = $_POST['text'];
 
-$text = $_POST['text'];
+    $content = file_get_contents($url);
 
-$tr = new TextRankFacade();
+    $dom = new domDocument();
+    @$dom->loadHTML(mb_convert_encoding($content, 'HTML-ENTITIES', 'UTF-8'));
 
-$stopWords = new Vietnamese();
-$tr->setStopWords($stopWords);
+    $scrape = $dom->getElementsByTagName('p');
 
-// Array of the sentences from the most important part of the text:
-$result = $tr->getHighlights($text); 
+    $text = "";
+    foreach($scrape as $p) {
+        $text .= $p->nodeValue;
+        $text .= ' ';
+    }
 
-echo json_encode($result);
+    $tr = new TextRankFacade();
+
+    $detector = new LanguageDetector\LanguageDetector(null, ['en', 'vi']);
+
+    $lang = $detector->evaluate($text);
+
+    $stopWords = new Vietnamese();
+    if($lang == 'en') $stopWords = new English();
+
+    $tr->setStopWords($stopWords);
+    $result = $tr->getHighlights($text);
+
+    echo json_encode($result);
 ?>

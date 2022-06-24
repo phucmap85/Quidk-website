@@ -19,7 +19,6 @@ body * {
 }
 
 .header {
-    /* padding-bottom: 5px; */
     background-color: #E8F9FD;
     text-align: center;
     font-weight: bold;
@@ -78,22 +77,6 @@ body * {
 .check:checked:after {
     left: 25px;
     border: 2px solid #00a1ff;
-}
-
-.en {
-    margin-right: 5px;
-    background-color: transparent;
-    position: relative;
-    font-size: 25px;
-    color: #333;
-}
-
-.vn {
-    margin-left: 5px;
-    background-color: transparent;
-    position: relative;
-    font-size: 25px;
-    color: #0AA1DD;
 }
 
 .submit {
