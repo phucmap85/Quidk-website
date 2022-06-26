@@ -18,7 +18,7 @@
 
 ![image](https://user-images.githubusercontent.com/58034112/175824649-9a1393f4-b749-4374-a27c-fbd847e0a983.png)
 
-**- Step 4:** Open browser `Extensions tab`.
+**- Step 4:** Open your browser `Extensions tab`.
 
 ![image](https://user-images.githubusercontent.com/58034112/175825137-0f2fa33e-50d1-4d1b-8e84-66b985fa7485.png)
 
@@ -26,9 +26,14 @@
 
 ![image](https://user-images.githubusercontent.com/58034112/175825278-93838404-37ff-4cbe-b003-f594a347854c.png)
 
-**- Step 6:** Select Quidk extension directory.
+**- Step 6:** Select `Quidk extension directory`.
 
 ![image](https://user-images.githubusercontent.com/58034112/175825467-5bc9aeb8-5db1-436d-81cb-e4d6b1dbb883.png)
+
+**- Step 7:** Enjoy!
+
+![image](https://user-images.githubusercontent.com/58034112/175825617-6806ee8b-c295-49e4-9c3a-4f81c9b0138c.png)
+
 
 ## Acknowledgments
 - [An Introduction to Text Summarization using the TextRank Algorithm (with Python implementation)](https://www.analyticsvidhya.com/blog/2018/11/introduction-text-summarization-textrank-python/)
