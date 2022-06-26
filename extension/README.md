@@ -12,7 +12,7 @@ This extension is the **lite version** of the original website, and even faster 
 
 ## Installation
 
-**- Step 1:** Download `Quidk extension` and move to `xampp\htdocs`
+**- Step 1:** Download `Quidk extension` and move folder to `xampp\htdocs`
 
 **- Step 2:** Open `XAMPP Control Panel`.
 
