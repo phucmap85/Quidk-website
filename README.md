@@ -2,6 +2,8 @@
 
 **Quidk** is a summarization website for essays, scientific papers, thesis, web pages,... brings convenience in learning for students and teachers.
 
+***Chrome extension available [here](extension)***
+
 ## Functionality
 
 The website is capable of performing 2 kinds of text summarization tasks:
