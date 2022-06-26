@@ -6,6 +6,22 @@
 
 ## Installation
 
+- Step 1: Open XAMPP Control Panel.
+![image](https://user-images.githubusercontent.com/58034112/175824455-78f75e64-003f-4c2c-b09c-04a7d8dedd43.png)
+
+- Step 2: Start Apache module.
+![image](https://user-images.githubusercontent.com/58034112/175824506-67b10f7e-2e39-4778-8e63-2557372cf7e3.png)
+
+![image](https://user-images.githubusercontent.com/58034112/175824649-9a1393f4-b749-4374-a27c-fbd847e0a983.png)
+
+- Step 3: Open browser Extension tab.
+![image](https://user-images.githubusercontent.com/58034112/175825137-0f2fa33e-50d1-4d1b-8e84-66b985fa7485.png)
+
+- Step 4: Turn on Developer mode and click "Load unpacked".
+![image](https://user-images.githubusercontent.com/58034112/175825278-93838404-37ff-4cbe-b003-f594a347854c.png)
+
+
+
 ## Acknowledgments
 - [An Introduction to Text Summarization using the TextRank Algorithm (with Python implementation)](https://www.analyticsvidhya.com/blog/2018/11/introduction-text-summarization-textrank-python/)
 - [TextRank (automatic text summarization) for PHP7 and 8](https://github.com/PHP-Science/TextRank)
