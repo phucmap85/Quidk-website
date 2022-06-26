@@ -6,25 +6,27 @@
 
 ## Installation
 
-**- Step 1:** Open `XAMPP Control Panel`.
+**- Step 1:** Download `Quidk extension` and move to `xampp\htdocs`
+
+**- Step 2:** Open `XAMPP Control Panel`.
 
 ![image](https://user-images.githubusercontent.com/58034112/175824455-78f75e64-003f-4c2c-b09c-04a7d8dedd43.png)
 
-**- Step 2:** Start `Apache module`.
+**- Step 3:** Start `Apache module`.
 
 ![image](https://user-images.githubusercontent.com/58034112/175824506-67b10f7e-2e39-4778-8e63-2557372cf7e3.png)
 
 ![image](https://user-images.githubusercontent.com/58034112/175824649-9a1393f4-b749-4374-a27c-fbd847e0a983.png)
 
-**- Step 3:** Open browser `Extensions tab`.
+**- Step 4:** Open browser `Extensions tab`.
 
 ![image](https://user-images.githubusercontent.com/58034112/175825137-0f2fa33e-50d1-4d1b-8e84-66b985fa7485.png)
 
-**- Step 4:** Turn on `Developer mode` and click `Load unpacked`.
+**- Step 5:** Turn on `Developer mode` and click `Load unpacked`.
 
 ![image](https://user-images.githubusercontent.com/58034112/175825278-93838404-37ff-4cbe-b003-f594a347854c.png)
 
-**- Step 5:** Select Quidk extension directory.
+**- Step 6:** Select Quidk extension directory.
 
 ![image](https://user-images.githubusercontent.com/58034112/175825467-5bc9aeb8-5db1-436d-81cb-e4d6b1dbb883.png)
 
