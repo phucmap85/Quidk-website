@@ -1,7 +1,7 @@
 # Quidk - The fastest Chrome extension to shorten text
 
 ## Prerequisites
-- A supported browser with [Developer mode](https://www.quora.com/How-do-I-enable-developer-mode-in-Google-Chrome) (Google Chrome, Opera, Firefox,...).
+- A supported browser with [Developer mode](https://www.quora.com/How-do-I-enable-developer-mode-in-Google-Chrome) (Google Chrome, Opera, Firefox, etc.).
 - [XAMPP](https://www.apachefriends.org/download.html)
 
 ## Installation
