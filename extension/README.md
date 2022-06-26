@@ -1,1 +1,2 @@
-# Quidk Extension - A fastest way to shorten the text
+# Quidk - Text Summarization
+The fastest way to shorten the text
