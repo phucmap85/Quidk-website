@@ -1,2 +1,1 @@
-# This Chrome Extension Is Very Good :33
-# I <3 Puc
+# Quidk Extension - A fastest way to shorten the text
