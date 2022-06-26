@@ -2,7 +2,7 @@
 
 ## Functionality
 
-The extension is the **lite version** of the original website, and even faster by using TextRank algorithm.
+This extension is the **lite version** of the original website, and even faster by using TextRank algorithm.
 
 ![image](https://user-images.githubusercontent.com/58034112/175827318-755e0dc6-587e-4beb-8604-7537f36dba70.png)
 
