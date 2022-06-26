@@ -32,7 +32,7 @@
 
 **- Step 7:** Enjoy!
 
-![image](https://user-images.githubusercontent.com/58034112/175825617-6806ee8b-c295-49e4-9c3a-4f81c9b0138c.png)
+![image](https://user-images.githubusercontent.com/58034112/175825699-945a8958-5175-4d58-9fb5-d8bf51d9c8dc.png)
 
 
 ## Acknowledgments
