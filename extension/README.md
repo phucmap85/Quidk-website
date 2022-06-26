@@ -37,7 +37,7 @@
 
 ## Acknowledgments
 - [An Introduction to Text Summarization using the TextRank Algorithm (with Python implementation)](https://www.analyticsvidhya.com/blog/2018/11/introduction-text-summarization-textrank-python/)
-- [TextRank (automatic text summarization) for PHP7 and 8](https://github.com/PHP-Science/TextRank)
+- [TextRank Algorithm for PHP7 and 8](https://github.com/PHP-Science/TextRank)
 
 ## Credits
 [Le Quang Phuc](https://www.facebook.com/phuc.lequang.9081/)</br>
