@@ -2,7 +2,7 @@
 
 body {
     width: 360px;
-    height: 100vh;
+    height: 50vh;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -113,6 +113,7 @@ body * {
     font-size: 20px;
     color: #0AA1DD;
     overflow: auto;
+    margin-bottom: 25px;
 }
 
 .form .output p{
