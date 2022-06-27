@@ -3,26 +3,24 @@ Quidk - Text Summarization
 </h1>
 
 <p align="center">
-    <a href="https://github.com/lqphuc123/Quidk/actions/new">
+	<a href="https://github.com/lqphuc123/Quidk/actions/new">
 		<img src="https://github.com/php-science/textrank/workflows/tests/badge.svg"/>
 	</a>
 	<a href="https://github.com/lqphuc123/Quidk/tree/main/extension">
-	    <img src="https://img.shields.io/badge/stable-2.1.0.4-orange" />
+		<img src="https://img.shields.io/badge/stable-2.1.0.4-orange" />
 	</a>
 	<a href="https://mega.nz/file/Fe5jhZKQ#aN3FP9vsbWiM1XibPonuotOQRV5LB8ed0ammmOq5ty0">
-        <img src="https://img.shields.io/badge/download-20-red"/>
-    </a>
+        	<img src="https://img.shields.io/badge/download-20-red"/>
+	</a>
 	<a href="https://github.com/lqphuc123/Quidk/blob/main/LICENSE">
-        <img src="https://img.shields.io/github/license/lqphuc123/Quidk"/>
-    </a>
+        	<img src="https://img.shields.io/github/license/lqphuc123/Quidk"/>
+    	</a>
 </p>
 
 <p align="center">
 A summarization website for essays, scientific papers, thesis, web pages,... brings convenience in learning for students and teachers.</br>
-***Chrome extension available [here](extension)***
+Chrome extension available <a href="https://github.com/lqphuc123/Quidk/tree/main/extension">here</a>
 </p>
-
-
 
 ## Functionality
 
