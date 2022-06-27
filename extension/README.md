@@ -1,4 +1,6 @@
-# Quidk - The fastest Chrome extension to shorten text
+<h1 align="center">
+Quidk extension
+</h1>
 
 <p align="center">
     <a href="https://github.com/lqphuc123/Quidk/actions/new">
@@ -13,6 +15,10 @@
 	<a href="https://github.com/lqphuc123/Quidk/blob/main/extension/LICENSE">
         <img src="https://img.shields.io/github/license/lqphuc123/Quidk"/>
     </a>
+</p>
+
+<p align="center">
+	The fastest Chrome extension to shorten text
 </p>
 
 ## Functionality
