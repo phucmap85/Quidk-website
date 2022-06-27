@@ -2,6 +2,8 @@
 
 [Download](https://mega.nz/file/Fe5jhZKQ#aN3FP9vsbWiM1XibPonuotOQRV5LB8ed0ammmOq5ty0)
 
+[![Issues](https://img.shields.io/github/issues/lqphuc123/Quidk)](https://github.com/lqphuc123/Quidk/issues)
+
 ## Functionality
 
 This extension is the **lite version** of the original website, and even faster by using **TextRank algorithm**.
