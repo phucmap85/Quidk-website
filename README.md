@@ -1,4 +1,26 @@
-# Quidk - Text Summarization
+<h1 align="center">
+Quidk - Text Summarization
+</h1>
+
+<p align="center">
+    <a href="https://github.com/lqphuc123/Quidk/actions/new">
+		<img src="https://github.com/php-science/textrank/workflows/tests/badge.svg"/>
+	</a>
+	<a href="https://github.com/lqphuc123/Quidk/tree/main/extension">
+	    <img src="https://img.shields.io/badge/stable-2.1.0.4-orange" />
+	</a>
+	<a href="https://mega.nz/file/Fe5jhZKQ#aN3FP9vsbWiM1XibPonuotOQRV5LB8ed0ammmOq5ty0">
+        <img src="https://img.shields.io/badge/download-20-red"/>
+    </a>
+	<a href="https://github.com/lqphuc123/Quidk/blob/main/LICENSE">
+        <img src="https://img.shields.io/github/license/lqphuc123/Quidk"/>
+    </a>
+</p>
+
+<p align="center">
+The fastest Chrome-based extension to summarize a text, article for example to a short paragraph.</br>
+It is possible to extend it with <a href="https://github.com/lqphuc123/Quidk/tree/main/extension/TextRank/StopWords">another languages</a>.
+</p>
 
 **Quidk** is a summarization website for essays, scientific papers, thesis, web pages,... brings convenience in learning for students and teachers.
 
