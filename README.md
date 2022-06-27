@@ -18,13 +18,11 @@ Quidk - Text Summarization
 </p>
 
 <p align="center">
-The fastest Chrome-based extension to summarize a text, article for example to a short paragraph.</br>
-It is possible to extend it with <a href="https://github.com/lqphuc123/Quidk/tree/main/extension/TextRank/StopWords">another languages</a>.
+A summarization website for essays, scientific papers, thesis, web pages,... brings convenience in learning for students and teachers.</br>
+***Chrome extension available [here](extension)***
 </p>
 
-**Quidk** is a summarization website for essays, scientific papers, thesis, web pages,... brings convenience in learning for students and teachers.
 
-***Chrome extension available [here](extension)***
 
 ## Functionality
 
