@@ -42,7 +42,7 @@ This extension is the **lite version** of the original website, and even faster 
 
 
 ## Acknowledgments
-- [An Introduction to Text Summarization using the TextRank Algorithm (with Python implementation)](https://www.analyticsvidhya.com/blog/2018/11/introduction-text-summarization-textrank-python/)
+- [An Introduction to Text Summarization using the TextRank Algorithm](https://www.analyticsvidhya.com/blog/2018/11/introduction-text-summarization-textrank-python/)
 - [TextRank Algorithm for PHP7 and 8](https://github.com/PHP-Science/TextRank)
 
 ## Credits
