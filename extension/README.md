@@ -39,7 +39,7 @@ This extension is the **lite version** of the original website, and even faster 
 - Spanish
 ```
 
-![image](https://user-images.githubusercontent.com/58034112/175827318-755e0dc6-587e-4beb-8604-7537f36dba70.png)
+![image](https://user-images.githubusercontent.com/58034112/175853148-83d7f89e-4063-41eb-83c4-596d3fbadaac.png)
 
 ## Prerequisites
 - Supported browser with [Developer mode](https://www.quora.com/How-do-I-enable-developer-mode-in-Google-Chrome) (Google Chrome, Opera, Firefox, etc.).
