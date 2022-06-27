@@ -37,6 +37,8 @@ This extension is the **lite version** of the original website, and even faster 
 - Norwegian
 - Russian
 - Spanish
+
+Add more languages by editing StopWords and add it to TextRank/StopWords.
 ```
 
 ![image](https://user-images.githubusercontent.com/58034112/175827318-755e0dc6-587e-4beb-8604-7537f36dba70.png)
