@@ -18,7 +18,8 @@ Quidk
 </p>
 
 <p align="center">
-The fastest Chrome-based extension to summarize a text, article for example to a short paragraph. Before it would start the summarizing it removes the junk words what are defined in the Stopwords namespace. It is possible to extend it with <a href="https://github.com/lqphuc123/Quidk/tree/main/extension/TextRank/StopWords">another languages</a>.
+The fastest Chrome-based extension to summarize a text, article for example to a short paragraph.</br>
+It is possible to extend it with <a href="https://github.com/lqphuc123/Quidk/tree/main/extension/TextRank/StopWords">another languages</a>.
 </p>
 
 ## Functionality
