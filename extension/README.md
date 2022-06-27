@@ -1,5 +1,5 @@
 <h1 align="center">
-Quidk
+	Quidk - Text Summarization
 </h1>
 
 <p align="center">
