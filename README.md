@@ -6,7 +6,7 @@ Quidk - Text Summarization
 	<a href="https://github.com/lqphuc123/Quidk/actions/new">
 		<img src="https://github.com/php-science/textrank/workflows/tests/badge.svg"/>
 	</a>
-	<a href="https://github.com/lqphuc123/Quidk/tree/main/extension">
+	<a href="https://github.com/lqphuc123/Quidk">
 		<img src="https://img.shields.io/badge/stable-2.1.0.4-orange" />
 	</a>
 	<a href="https://mega.nz/file/Fe5jhZKQ#aN3FP9vsbWiM1XibPonuotOQRV5LB8ed0ammmOq5ty0">
