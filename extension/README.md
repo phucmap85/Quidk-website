@@ -1,7 +1,7 @@
 # Quidk - The fastest Chrome extension to shorten text
 
 [![Issues](https://img.shields.io/github/issues/lqphuc123/Quidk)](https://github.com/lqphuc123/Quidk/issues)
-[![Stable](https://img.shields.io/badge/stable-2.1.0.4-orange)]
+![Stable](https://img.shields.io/badge/stable-2.1.0.4-orange)
 [![Download](https://img.shields.io/badge/download-23-blue)](https://mega.nz/file/Fe5jhZKQ#aN3FP9vsbWiM1XibPonuotOQRV5LB8ed0ammmOq5ty0)
 [![License](https://img.shields.io/github/license/lqphuc123/Quidk)](LICENSE)
 
