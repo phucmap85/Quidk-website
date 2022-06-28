@@ -258,26 +258,17 @@ body{
         
         <div class="container">
             <span class="en">English</span>
-            <input type="checkbox" class="check">
+            <input type="checkbox" class="check" id="checkbox">
             <span class="vn">Vietnamese</span>
         </div>
 
-        <button class="submit" type="submitBtn">Summarize</button>
+        <button class="submit" type="submit" id="submitBtn">Summarize</button>
         <p id="output">Result</p>
     </div>
 
     <script type="module">
         var reader = new FileReader();
         var language = new String("en");
-
-        const checkbx = document.getElementById('check');
-
-        if(checkbx) {
-            checkbx.addEventListener('change', (event) => {
-                language = new String("vi");
-                console.log(language);
-            });
-        }
 
         // Import the functions you need from the SDKs you need
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.4/firebase-app.js";
@@ -336,13 +327,18 @@ body{
             );
         }
 
-        var checksubmit = document.getElementById('submitBtn');
+        document.getElementById('checkbox').addEventListener('change', e => {
+            if(e.target.checked === true) {
+                language = new String("vi");
+                console.log('vi');
+            }
+            if(e.target.checked === false) {
+                language = new String("en");
+                console.log('en');
+            }
+        });
 
-        if(checksubmit) {
-            checksubmit.addEventListener('click', () => {
-                uploadFile();
-            });
-        }
+        document.getElementById('submitBtn').addEventListener('click', uploadFile);
     </script>
 </body>
 </html>
