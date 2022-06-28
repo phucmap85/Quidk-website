@@ -9,7 +9,7 @@
 	<a href="https://github.com/lqphuc123/Quidk/tree/main/extension">
 	    <img src="https://img.shields.io/badge/stable-2.1.0.4-orange" />
 	</a>
-	<a href="https://mega.nz/file/Fe5jhZKQ#aN3FP9vsbWiM1XibPonuotOQRV5LB8ed0ammmOq5ty0">
+	<a href="https://www.mediafire.com/file/h4vvqqofdmuacbr/quidk-extension.zip/file">
         <img src="https://img.shields.io/badge/download-23-blue"/>
     </a>
 	<a href="https://github.com/lqphuc123/Quidk/blob/main/extension/LICENSE">
