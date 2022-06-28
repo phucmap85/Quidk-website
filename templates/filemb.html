@@ -1,5 +1,3 @@
-<!-- & c:/Users/ASUS/Documents/Codes/PY/Projects/env/bin/Activate.ps1 -->
-
 <!DOCTYPE html>
 <html>    
 <head>
@@ -253,75 +251,98 @@ body{
         <button class="text-btn" onclick="window.location.href = '/home';">Raw text</button>
         <button class="link-btn" onclick="window.location.href = '/linkemb';">Link embedded</button>
         <button class="file-btn">File embedded</button>
-        <!-- <input type="button" class="btn1" value="Test"> -->
     </div>    
 
-
     <div class="form">
-        <input type="File" id="file" accept=".doc, .docx, .pdf" placeholder=" ">
-        <!-- <label for="file">Import text</label> -->
-        
+        <input type="file" id="file-selector" accept=".doc, .docx, .pdf" placeholder=" ">
         
         <div class="container">
             <span class="en">English</span>
-            <input type="checkbox" class="check" onchange="Changed(this)">
+            <input type="checkbox" class="check">
             <span class="vn">Vietnamese</span>
-            <!-- <input type="checkbox" class="check"> -->
         </div>
 
-        <button class="submit" type="submit" onclick="clicked()">Summarize</button>
+        <button class="submit" type="submitBtn">Summarize</button>
         <p id="output">Result</p>
     </div>
 
-    <script>
-        var language = new String("en");
-        function LangChanged(checkboxElem) {
-            language = new String("en");
-            if (checkboxElem.checked) {
-                language = new String("vi");
-            }
-        }
-
-        function clicked() {
-            document.getElementById("output").innerHTML = "Loading...";
-            var x = document.getElementById("file").value;
-            const sep = x.split(".");
-            let userInput = {'lang': language, 'type': sep.at(-1)};
-            const request = new XMLHttpRequest();
-            request.open("POST", "/filemb");
-            request.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-            request.onload = () => {
-                const flaskMessage = request.responseText
-                document.getElementById("output").innerHTML = flaskMessage;
-            }
-            request.send(JSON.stringify(userInput));
-        }
-    </script>
-
     <script type="module">
+        var reader = new FileReader();
+        var language = new String("en");
+
+        const checkbx = document.getElementById('check');
+
+        if(checkbx) {
+            checkbx.addEventListener('change', (event) => {
+                language = new String("vi");
+                console.log(language);
+            });
+        }
+
         // Import the functions you need from the SDKs you need
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-app.js";
-        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-analytics.js";
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.4/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.8.4/firebase-analytics.js";
         // TODO: Add SDKs for Firebase products that you want to use
         // https://firebase.google.com/docs/web/setup#available-libraries
-      
+
         // Your web app's Firebase configuration
         // For Firebase JS SDK v7.20.0 and later, measurementId is optional
         const firebaseConfig = {
-            apiKey: "AIzaSyDxNVzf41GCNIY7i-DHtKA3Q-wLRC1aC9Y",
-            authDomain: "quidk-581d0.firebaseapp.com",
-            databaseURL: "https://quidk-581d0-default-rtdb.asia-southeast1.firebasedatabase.app",
-            projectId: "quidk-581d0",
-            storageBucket: "quidk-581d0.appspot.com",
-            messagingSenderId: "103191205735",
-            appId: "1:103191205735:web:ba18ddd9c24ca48be641c2",
-            measurementId: "G-JC3ZCRKWYN"
+            apiKey: "AIzaSyAwI5LU77z9AYICBbJ35YvJI7-Jo0Rxs1E",
+            authDomain: "quidk-414dd.firebaseapp.com",
+            projectId: "quidk-414dd",
+            storageBucket: "quidk-414dd.appspot.com",
+            messagingSenderId: "665446923681",
+            appId: "1:665446923681:web:14dec0e41aeb13ebd7dfe0",
+            measurementId: "G-JJJ4NYZLHB"
         };
-      
+
         // Initialize Firebase
         const app = initializeApp(firebaseConfig);
         const analytics = getAnalytics(app);
-    </script>
 
+        import { getStorage, ref as sRef, uploadBytesResumable, getDownloadURL } 
+            from "https://www.gstatic.com/firebasejs/9.8.4/firebase-storage.js";
+
+        const fileSelector = document.getElementById('file-selector');
+        var files = [];
+        
+        fileSelector.addEventListener('change', (event) => {
+            files = event.target.files;
+            console.log(files[0]);
+            reader.readAsDataURL(files[0]);
+        });
+
+        async function uploadFile() {
+            var FileToUpload = files[0];
+            
+            const metaData = {
+                contentType: FileToUpload.type
+            }
+
+            const storage = getStorage();
+
+            const storageRef = sRef(storage, FileToUpload.name);
+
+            const UploadTask = uploadBytesResumable(storageRef, FileToUpload, metaData);
+
+            UploadTask.on('state-changed', (snapshot) => {
+                var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+                console.log(progress);
+            },
+            (error) => {
+                alert("Error");
+            }
+            );
+        }
+
+        var checksubmit = document.getElementById('submitBtn');
+
+        if(checksubmit) {
+            checksubmit.addEventListener('click', () => {
+                uploadFile();
+            });
+        }
+    </script>
 </body>
 </html>
