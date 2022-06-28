@@ -20,7 +20,7 @@ Quidk - Text Summarization
 <p align="center">
 A summarization website for essays, scientific papers, thesis, web pages, etc. brings convenience in learning for students and teachers.</br>
 </br>
-<strong>Chrome-based extension available <a href="https://github.com/lqphuc123/Quidk/tree/main/extension">here</a>.</strong>
+<strong>Chromium-based extension available <a href="https://github.com/lqphuc123/Quidk/tree/main/extension">here</a>.</strong>
 </p>
 
 ## Functionality
