@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Quidk",
   "version": "2.1.0.4",
-  "description": "Text summarization",
+  "description": "The fastest Chromium-based extension to shorten pages.",
   "permissions":  ["tabs", "activeTab", "storage"],
   "host_permissions": ["https://ajax.googleapis.com/", "https://*.google.com/"],
   "action": {
