@@ -24,7 +24,7 @@ It is possible to extend it with <a href="https://github.com/lqphuc123/Quidk/tre
 
 ## Functionality
 
-This extension is the **lite version** of the original website, and even faster by using **TextRank algorithm**.
+This extension is the **lite version** of the [original website](https://github.com/lqphuc123/Quidk), and even faster by using **TextRank algorithm**.
 
 ```
 9 languages support:
