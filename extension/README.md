@@ -18,15 +18,28 @@
 </p>
 
 <p align="center">
-The fastest Chrome-based extension to summarize a text, article for example to a short paragraph.</br>
+The fastest Chromium-based extension to shorten pages.</br>
 It is possible to extend it with <a href="https://github.com/lqphuc123/Quidk/tree/main/extension/TextRank/StopWords">another languages</a>.
 </p>
 
 ## Functionality
 
-This extension is the **lite version** of the original website, and even faster by using **TextRank algorithm**.
+This extension is the **lite version** of the [original website](https://github.com/lqphuc123/Quidk), and even faster by using **TextRank algorithm**.
 
-![image](https://user-images.githubusercontent.com/58034112/175827318-755e0dc6-587e-4beb-8604-7537f36dba70.png)
+```
+9 languages support:
+- English
+- Vietnamese
+- French
+- German
+- Indonesian
+- Italian
+- Norwegian
+- Russian
+- Spanish
+```
+
+![image](https://user-images.githubusercontent.com/58034112/175853148-83d7f89e-4063-41eb-83c4-596d3fbadaac.png)
 
 ## Prerequisites
 - Supported browser with [Developer mode](https://www.quora.com/How-do-I-enable-developer-mode-in-Google-Chrome) (Google Chrome, Opera, Firefox, etc.).
@@ -34,7 +47,7 @@ This extension is the **lite version** of the original website, and even faster 
 
 ## Installation
 
-**- Step 1:** Download `Quidk extension`, unzip and move the folder to `xampp\htdocs`.
+**- Step 1:** Download `Quidk extension`, [unzip](https://support.microsoft.com/en-us/windows/zip-and-unzip-files-8d28fa72-f2f9-712f-67df-f80cf89fd4e5#:~:text=To%20unzip%20a%20single%20file,and%20then%20follow%20the%20instructions.) and move the folder to `xampp\htdocs`.
 
 **- Step 2:** Open `XAMPP Control Panel`.
 
