@@ -286,16 +286,15 @@ body{
         function clicked(){
             document.getElementById("output").innerHTML = "Loading...";
             var x = document.getElementById("text1").value;
-            jQuery.ajax({
-                type: "POST",
-                url: 'summarization.php',
-                dataType: 'json',
-                data: {text: x, lang: language},
-
-                success: function (obj, textstatus) {
-                    document.getElementById("output").innerHTML = obj;
-                }
-            });
+            let userInput = {'text' : x, 'lang': language}
+            const request = new XMLHttpRequest();
+            request.open("POST", "/home");
+            request.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+            request.onload = () => {
+                const flaskMessage = request.responseText
+                document.getElementById("output").innerHTML = flaskMessage;
+            }
+            request.send(JSON.stringify(userInput));
         }
     </script>
 
