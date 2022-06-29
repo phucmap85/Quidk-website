@@ -254,7 +254,7 @@ body{
     </div>    
 
     <div class="form">
-        <input type="file" id="file-selector" accept=".doc, .docx, .pdf" placeholder=" ">
+        <input type="file" id="file-selector" accept=".docx, .pdf" placeholder=" ">
         
         <div class="container">
             <span class="en">English</span>
@@ -304,6 +304,12 @@ body{
             reader.readAsDataURL(files[0]);
         });
 
+        function GetFileExtension(file) {
+            var temp = file.name.split('.');
+            var ext = temp.slice(temp.length-1, temp.length);
+            return ext[0];
+        }
+
         async function uploadFile() {
             var FileToUpload = files[0];
             
@@ -313,7 +319,7 @@ body{
 
             const storage = getStorage();
 
-            const storageRef = sRef(storage, FileToUpload.name);
+            const storageRef = sRef(storage, "example." + GetFileExtension(FileToUpload));
 
             const UploadTask = uploadBytesResumable(storageRef, FileToUpload, metaData);
 
@@ -322,7 +328,23 @@ body{
                 console.log(progress);
             },
             (error) => {
-                alert("Error");
+                alert("Error when upload to server.");
+            },
+            () => {
+                getDownloadURL(UploadTask.snapshot.ref).then((downloadURL) => {
+                    document.getElementById("output").innerHTML = "Loading...";
+                    let userInput = {'link': downloadURL, 'ext': GetFileExtension(FileToUpload), 'lang': language};
+                    console.log(userInput);
+                    const request = new XMLHttpRequest();
+                    request.open("POST", "/filemb");
+                    request.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+                    request.onload = () => { 
+                        const flaskMessage = request.responseText
+                        document.getElementById("output").innerHTML = flaskMessage;
+                    }
+                    request.send(JSON.stringify(userInput));
+                });
+                
             }
             );
         }
