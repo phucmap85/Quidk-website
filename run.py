@@ -1,16 +1,10 @@
-import os
-
-import firebase_admin
-from firebase_admin import credentials
-from firebase_admin import storage
-
 from flask import Flask, render_template, request
 from transformers import pipeline
 from bs4 import BeautifulSoup
 import requests
 from googletrans import Translator
-# import docx
-import pyrebase
+import docx
+import requests
 
 app = Flask(__name__)
 
@@ -19,20 +13,32 @@ summarizer = pipeline("summarization")
 translator = Translator()
 
 # File Summarization
-firebaseConfig = {
-    "apiKey": "AIzaSyDxNVzf41GCNIY7i-DHtKA3Q-wLRC1aC9Y",
-    "authDomain": "quidk-581d0.firebaseapp.com",
-    "databaseURL": "https://quidk-581d0-default-rtdb.asia-southeast1.firebasedatabase.app",
-    "projectId": "quidk-581d0",
-    "storageBucket": "quidk-581d0.appspot.com",
-    "serviceAccount": "serviceAccountKey.json"
-}
+def readDocx(fileName):
+    doc = docx.Document(fileName)
+    
+    completedText = []
 
-# def FileSummarize(lang, type):
-#     firebase = pyrebase.initialize_app(firebaseConfig)
-#     rtd = firebase.storage()
+    for paragraph in doc.paragraphs:
+        completedText.append(paragraph.text)
+    
+    return '\n'.join(completedText)
 
-#     rtd.child("example." + type).download("example." + type)
+def FileSummarize(link, lang, type):
+    response = requests.get(link)
+    filename = ""
+    text = "As travel recovers from pandemic lows, travelers are once again experiencing the consequences of overtourism at enticing, but crowded, destinations. The UN World Tourism Organization, along with public and private sector partners, marks September 27 as World Tourism Day and uses this platform to discuss tourism’s social, political, economic, and environmental impacts."
+
+    if(type == 'docx'):
+        filename = "example.docx"
+    else:
+        filename = "example.pdf"
+
+    open(filename, "wb").write(response.content)
+    
+    if(type == 'docx'):
+        text = readDocx(filename)
+
+    return TextSummarize(text, lang)
 
 # Link Summarization
 def LinkSummarize(URL, lang):
@@ -111,10 +117,10 @@ def getLink():
     userInput = request.get_json(force=True)
     return LinkSummarize(userInput['text'], userInput['lang'])
 
-# @app.route('/filemb', method=['POST'])
-# def getFile():
-#     userInput = request.get_json(force=True)
-#     return FileSummarize(userInput['lang'], userInput['type'])
+@app.route('/filemb', methods=['POST'])
+def getFile():
+    userInput = request.get_json(force=True)
+    return FileSummarize(userInput['link'], userInput['lang'], userInput['ext'])
 
 if __name__ == "__main__":
     app.run(debug = True)
