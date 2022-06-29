@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 import requests
 from googletrans import Translator
 import docx
-import requests
+import PyPDF2
 
 app = Flask(__name__)
 
@@ -22,6 +22,9 @@ def readDocx(fileName):
         completedText.append(paragraph.text)
     
     return '\n'.join(completedText)
+
+# def readPDF(fileName):
+
 
 def FileSummarize(link, lang, type):
     response = requests.get(link)
