@@ -1,10 +1,11 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, send_from_directory
 from transformers import pipeline
 from bs4 import BeautifulSoup
+import os
 import requests
 from googletrans import Translator
 import docx
-import PyPDF2
+import PyPDF2 as pdf
 
 app = Flask(__name__)
 
@@ -23,8 +24,16 @@ def readDocx(fileName):
     
     return '\n'.join(completedText)
 
-# def readPDF(fileName):
+def readPDF(fileName):
+    file = open(fileName, "rb")
+    pdf_reader = pdf.PdfFileReader(file)
 
+    text = ""
+
+    for i in range(pdf_reader.getNumPages()):
+        text = '\n' + pdf_reader.getPage(i).extractText()
+
+    return text
 
 def FileSummarize(link, lang, type):
     response = requests.get(link)
@@ -40,6 +49,10 @@ def FileSummarize(link, lang, type):
     
     if(type == 'docx'):
         text = readDocx(filename)
+    else:
+        text = readPDF(filename)
+    
+    print(text)
 
     return TextSummarize(text, lang)
 
@@ -93,6 +106,10 @@ def TextSummarize(Text, lang):
     else:
         pp = translator.translate(res[0]['summary_text'], dest=lang)
         return pp.text
+
+@app.route("/favicon.ico")
+def favicon():
+    return send_from_directory(os.path.join(app.root_path, 'static'),'favicon.ico',mimetype='image/vnd.microsof.icon')
 
 @app.route("/")
 def first():
