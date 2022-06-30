@@ -1,5 +1,3 @@
-<!-- & c:/Users/ASUS/Documents/Codes/PY/Projects/env/bin/Activate.ps1 -->
-
 <!DOCTYPE html>
 <html>    
 <head>
@@ -7,255 +5,255 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quidk</title>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<style>
+    <link rel="shortcut icon" icon="image/x-icon" href="/favicon.ico">
+    <style>
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 
-*{
-    font-family: 'Noto Sans', sans-serif;
-    letter-spacing: 2px;
-    background-color: #E8F9FD;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    *{
+        font-family: 'Noto Sans', sans-serif;
+        letter-spacing: 2px;
+        background-color: #E8F9FD;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-body{
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
-    background-color: #E8F9FD;
-}
+    body{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        background-color: #E8F9FD;
+    }
 
-::-webkit-scrollbar{
-    display: none;
-}
+    ::-webkit-scrollbar{
+        display: none;
+    }
 
-.header{
-    padding: 100px;
-    padding-bottom: 25px;
-    background-color: #E8F9FD;
-    text-align: center;
-    font-weight: bold;
-    font-size: 50px;
-}
+    .header{
+        padding: 100px;
+        padding-bottom: 25px;
+        background-color: #E8F9FD;
+        text-align: center;
+        font-weight: bold;
+        font-size: 50px;
+    }
 
-.button{
-    display: flex;
-    background-color: #E8F9FD;
-    flex-direction: row;
-    justify-content: center;
-    border-spacing: 5px;
-    align-items: center;
-    text-align: center;
-    height: 15%;
-    width: auto;
-}
+    .button{
+        display: flex;
+        background-color: #E8F9FD;
+        flex-direction: row;
+        justify-content: center;
+        border-spacing: 5px;
+        align-items: center;
+        text-align: center;
+        height: 15%;
+        width: auto;
+    }
 
-.text-btn{
-    margin: 2.5px;
-    width: 300px;
-    height: 50px;
-    border: none;
-    color: #0AA1DD;
-    background-color: #79DAE8;
-    border-radius: 10px;
-    box-shadow: inset 0 0 0 0 #0AA1DD;
-    transition: ease-out 0.3s;
-    font-size: 2rem;
-    outline: none;
-}
+    .text-btn{
+        margin: 2.5px;
+        width: 300px;
+        height: 50px;
+        border: none;
+        color: #0AA1DD;
+        background-color: #79DAE8;
+        border-radius: 10px;
+        box-shadow: inset 0 0 0 0 #0AA1DD;
+        transition: ease-out 0.3s;
+        font-size: 2rem;
+        outline: none;
+    }
 
-.text-btn:hover{
-    box-shadow: inset 300px 0 0 0 #0AA1DD;
-    cursor: pointer;
-    color: #79DAE8;
-}
+    .text-btn:hover{
+        box-shadow: inset 300px 0 0 0 #0AA1DD;
+        cursor: pointer;
+        color: #79DAE8;
+    }
 
-.link-btn{
-    margin: 2.5px;
-    width: 300px;
-    height: 50px;
-    border: none;
-    color: #79DAE8;
-    background-color: #0AA1DD;
-    border-radius: 10px;
-    /* box-shadow: inset 0 0 0 0 #79DAE8;
-    transition: ease-out 0.3s; */
-    font-size: 2rem;
-    outline: none;
-}
-/* 
-.link-btn:hover{
-    box-shadow: inset 300px 0 0 0 #79DAE8;
-    cursor: pointer;
-    color: #0AA1DD;
-} */
+    .link-btn{
+        margin: 2.5px;
+        width: 300px;
+        height: 50px;
+        border: none;
+        color: #79DAE8;
+        background-color: #0AA1DD;
+        border-radius: 10px;
+        /* box-shadow: inset 0 0 0 0 #79DAE8;
+        transition: ease-out 0.3s; */
+        font-size: 2rem;
+        outline: none;
+    }
+    /* 
+    .link-btn:hover{
+        box-shadow: inset 300px 0 0 0 #79DAE8;
+        cursor: pointer;
+        color: #0AA1DD;
+    } */
 
-.file-btn{
-    margin: 2.5px;
-    width: 300px;
-    height: 50px;
-    border: none;
-    color: #0AA1DD;
-    background-color: #79DAE8;
-    border-radius: 10px;
-    box-shadow: inset 0 0 0 0 #0AA1DD;
-    transition: ease-out 0.3s ;
-    font-size: 2rem;
-    outline: none;
-}
+    .file-btn{
+        margin: 2.5px;
+        width: 300px;
+        height: 50px;
+        border: none;
+        color: #0AA1DD;
+        background-color: #79DAE8;
+        border-radius: 10px;
+        box-shadow: inset 0 0 0 0 #0AA1DD;
+        transition: ease-out 0.3s ;
+        font-size: 2rem;
+        outline: none;
+    }
 
-.file-btn:hover{
-    box-shadow: inset 300px 0 0 0 #0AA1DD;
-    cursor: pointer;
-    color: #79DAE8;
-}
+    .file-btn:hover{
+        box-shadow: inset 300px 0 0 0 #0AA1DD;
+        cursor: pointer;
+        color: #79DAE8;
+    }
 
-.form{
-    background-color: #E8F9FD;
-    width: 600px;
-    height: 50px;
-    position: relative;
-}
+    .form{
+        background-color: #E8F9FD;
+        width: 600px;
+        height: 50px;
+        position: relative;
+    }
 
-.form input{
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    border: 4px solid #79DAE8;
-    border-radius: 10px;
-    outline: none;
-    padding: 10px 10px;
-    font-size: 20px;
-    color: #0AA1DD;
-    margin-bottom: 10px;
-}
+    .form input{
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        border: 4px solid #79DAE8;
+        border-radius: 10px;
+        outline: none;
+        padding: 10px 10px;
+        font-size: 20px;
+        color: #0AA1DD;
+        margin-bottom: 10px;
+    }
 
-.form label{
-    background-color: #E8F9FD;
-    position: absolute;
-    top: 14px;
-    left: 15px;
-    color: #0AA1DD;
-    font-size: 18px;
-    transition: top .3s;
-    padding: 0 5px;
-}
+    .form label{
+        background-color: #E8F9FD;
+        position: absolute;
+        top: 14px;
+        left: 15px;
+        color: #0AA1DD;
+        font-size: 18px;
+        transition: top .3s;
+        padding: 0 5px;
+    }
 
-/* .form textarea:focus + label{
-    top: -9px
-} */
-.form input:focus+label,
-.form input:valid+label {
-    top: -11px;
-}
-.submit{
-    margin: 180px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    width: 40%;
-    height: 120%;
-    border: none;
-    color: #0AA1DD;
-    background-color: #79DAE8;
-    border-radius: 20px;
-    box-shadow: inset 0 0 0 0 #0AA1DD;
-    transition: all 0.3s ;
-    font-size: 2rem;
-    outline: none;
-}
+    /* .form textarea:focus + label{
+        top: -9px
+    } */
+    .form input:focus+label,
+    .form input:valid+label {
+        top: -11px;
+    }
+    .submit{
+        margin: 180px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 40%;
+        height: 120%;
+        border: none;
+        color: #0AA1DD;
+        background-color: #79DAE8;
+        border-radius: 20px;
+        box-shadow: inset 0 0 0 0 #0AA1DD;
+        transition: all 0.3s ;
+        font-size: 2rem;
+        outline: none;
+    }
 
-.submit:hover{
-    box-shadow: inset 300px 0 0 0 #0AA1DD;
-    cursor: pointer;
-    color: #79DAE8;
-}
-.form p{
-    width: 100%;
-    height: 300%;
-    background: transparent;
-    border: 4px solid #79DAE8;
-    border-radius: 10px;
-    outline: none;
-    padding: 10px 10px;
-    font-size: 20px;
-    color: #0AA1DD;
-    overflow: auto;
-}
+    .submit:hover{
+        box-shadow: inset 300px 0 0 0 #0AA1DD;
+        cursor: pointer;
+        color: #79DAE8;
+    }
+    .form p{
+        width: 100%;
+        height: 300%;
+        background: transparent;
+        border: 4px solid #79DAE8;
+        border-radius: 10px;
+        outline: none;
+        padding: 10px 10px;
+        font-size: 20px;
+        color: #0AA1DD;
+        overflow: auto;
+    }
 
-.form .container{
-    display: flex;
-    justify-content: center;
-    position: relative;
-    max-width: 800px;
-    height: 40px;
-    color: #555;
-}
+    .form .container{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        max-width: 800px;
+        height: 40px;
+        color: #555;
+    }
 
-.form .check{
-    height: 1px;
-    width: 1px;
-    top: 7.5px;
-    margin-bottom: 50px;
-    position: relative;
-    width: 50px;
-}
+    .form .check{
+        height: 1px;
+        width: 1px;
+        top: 7.5px;
+        margin-bottom: 50px;
+        position: relative;
+        width: 50px;
+    }
 
-.form .check:before{
-    content: '';
-    position: absolute;
-    width: 50px;
-    height: 25px;
-    background: #333;
-    border-radius: 25px;
-}
+    .form .check:before{
+        content: '';
+        position: absolute;
+        width: 50px;
+        height: 25px;
+        background: #333;
+        border-radius: 25px;
+    }
 
-.form .check:checked:before{
-    background-color: #0AA1DD;
-}
+    .form .check:checked:before{
+        background-color: #0AA1DD;
+    }
 
-.form .check:after{
-    content: '';
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    background: #fff;
-    border-radius: 25px;
-    transition: 0.01s;
-    border: 2px solid #333;
-    box-sizing: border-box;
-}
+    .form .check:after{
+        content: '';
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        background: #fff;
+        border-radius: 25px;
+        transition: 0.01s;
+        border: 2px solid #333;
+        box-sizing: border-box;
+    }
 
-.form .check:checked:after{
-    left: 25px;
-    border: 2px solid #00a1ff;
-}
+    .form .check:checked:after{
+        left: 25px;
+        border: 2px solid #00a1ff;
+    }
 
-.en{
-    margin-right: 5px;
-    background-color: transparent;
-    position: relative;
-    font-size: 25px;
-    color: #333;
-}
+    .en{
+        margin-right: 5px;
+        background-color: transparent;
+        position: relative;
+        font-size: 25px;
+        color: #333;
+    }
 
-.vn{
-    margin-left: 5px;
-    background-color: transparent;
-    position: relative;
-    font-size: 25px;
-    color: #0AA1DD;
-}
-</style>
-
+    .vn{
+        margin-left: 5px;
+        background-color: transparent;
+        position: relative;
+        font-size: 25px;
+        color: #0AA1DD;
+    }
+    </style>
 </head>    
 
 <body> 
-    <div class = "header" style="color: #051367;"> Text summarization </div>
+    <div class = "header" style="color: #051367;"> Quidk - Text Summarization </div>
 
     <div class ="button">
         <button class="text-btn" onclick="window.location.href = '/home';">Raw text</button>
