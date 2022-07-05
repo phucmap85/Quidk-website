@@ -25,19 +25,19 @@ A summarization website for essays, scientific papers, thesis, web pages, etc. b
 
 ## Functionality
 
-The website is capable of performing 2 kinds of text summarization tasks:
+The website is capable of performing 3 kinds of text summarization tasks:
 
 - By raw text:
 
-![image](https://user-images.githubusercontent.com/58034112/167919156-3609cb40-9518-4f1b-ba84-98ff295f2971.png)
+![image](https://user-images.githubusercontent.com/58034112/177291521-63320156-36fa-4424-b2bb-fa48b544b0fc.png)
 
 - By link embedded:
 
-![image](https://user-images.githubusercontent.com/58034112/167920052-5d5d1668-ed36-4a81-b8bb-00581e640fa9.png)
+![image](https://user-images.githubusercontent.com/58034112/177291569-fe0a12cb-bd1f-4a40-9da4-432083fb5af9.png)
 
-***- NEW UPDATE: Add translate options for 2 languages: Vietnamese and English***
+- By file:
 
-![image](https://user-images.githubusercontent.com/58034112/168003602-7b3db63f-db37-44fd-80a8-478994f6f561.png)
+![image](https://user-images.githubusercontent.com/58034112/177291616-099450b0-36b5-4272-908a-63ff29b5b52f.png)
 
 ## Prerequisites
 - [Flask](https://flask.palletsprojects.com/en/2.1.x/)
