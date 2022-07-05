@@ -51,8 +51,6 @@ def FileSummarize(link, lang, type):
         text = readDocx(filename)
     else:
         text = readPDF(filename)
-    
-    print(text)
 
     return TextSummarize(text, lang)
 
