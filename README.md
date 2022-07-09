@@ -9,7 +9,7 @@ Quidk - Text Summarization
 	<a href="https://github.com/lqphuc123/Quidk">
 		<img src="https://img.shields.io/badge/stable-2.1.0.4-orange" />
 	</a>
-	<a href="https://github.com/lqphuc123/Quidk/archive/refs/heads/main.zip">
+	<a href="https://github.com/lqphuc123/Quidk/releases/tag/v2.1.0.4">
         	<img src="https://img.shields.io/badge/download-20-red"/>
 	</a>
 	<a href="https://github.com/lqphuc123/Quidk/blob/main/LICENSE">
